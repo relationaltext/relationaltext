@@ -214,7 +214,7 @@ export default defineConfig({
     ],
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/blaine/relationaltext' },
+      { icon: 'github', link: 'https://github.com/relationaltext/relationaltext' },
     ],
   },
 })
