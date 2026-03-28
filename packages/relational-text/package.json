@@ -1,6 +1,6 @@
 {
   "name": "relational-text",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Rich text facets for the atproto ecosystem — text + typed annotations with CRDT-safe semantics",
   "type": "module",
   "main": "./dist/index.js",
@@ -79,10 +79,11 @@
     }
   },
   "files": [
-    "dist/"
+    "dist/",
+    "dist/wasm/"
   ],
   "scripts": {
-    "build": "pnpm build:format-wasm && tsup && rm -rf dist/wasm && cp -r src/wasm dist/wasm",
+    "build": "pnpm build:format-wasm && tsup && rm -rf dist/wasm && cp -r src/wasm dist/wasm && rm -f dist/wasm/.gitignore",
     "build:wasm": "wasm-pack build ../../crates/relationaltext-wasm --target bundler --out-dir ../../../packages/relational-text/src/wasm --out-name relationaltext_wasm",
     "build:format-wasm": "tsx ../../scripts/build-format-wasm.ts",
     "build:format-wasm:quill": "tsx ../../scripts/build-format-wasm.ts --format quill",

@@ -1,6 +1,8 @@
 target/
 node_modules/
-dist/
+/apps/**/dist/
+/formats/**/dist/
+/packages/relational-text-react/dist/
 .next/
 out/
 docs/.vitepress/cache/
