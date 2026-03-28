@@ -1,0 +1,110 @@
+{
+  "$type": "org.relationaltext.format-lexicon",
+  "id": "com.atlassian.wiki.facet",
+  "version": "1.0",
+  "specUrl": "https://confluence.atlassian.com/doc/confluence-wiki-markup-251003035.html",
+  "implicitBlockType": "paragraph",
+  "features": [
+    {
+      "typeId": "com.atlassian.wiki.facet#bold",
+      "featureClass": "inline",
+      "expandStart": true,
+      "expandEnd": true
+    },
+    {
+      "typeId": "com.atlassian.wiki.facet#italic",
+      "featureClass": "inline",
+      "expandStart": true,
+      "expandEnd": true
+    },
+    {
+      "typeId": "com.atlassian.wiki.facet#underline",
+      "featureClass": "inline",
+      "expandStart": true,
+      "expandEnd": true
+    },
+    {
+      "typeId": "com.atlassian.wiki.facet#strikethrough",
+      "featureClass": "inline",
+      "expandStart": true,
+      "expandEnd": true
+    },
+    {
+      "typeId": "com.atlassian.wiki.facet#superscript",
+      "featureClass": "inline",
+      "expandStart": false,
+      "expandEnd": false
+    },
+    {
+      "typeId": "com.atlassian.wiki.facet#subscript",
+      "featureClass": "inline",
+      "expandStart": false,
+      "expandEnd": false
+    },
+    {
+      "typeId": "com.atlassian.wiki.facet#monospace",
+      "featureClass": "inline",
+      "expandStart": false,
+      "expandEnd": false
+    },
+    {
+      "typeId": "com.atlassian.wiki.facet#link",
+      "featureClass": "entity"
+    },
+    {
+      "typeId": "com.atlassian.wiki.facet#image",
+      "featureClass": "entity"
+    },
+    {
+      "typeId": "com.atlassian.wiki.facet#paragraph",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "com.atlassian.wiki.facet#heading",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "com.atlassian.wiki.facet#code-block",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "com.atlassian.wiki.facet#blockquote-marker",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "com.atlassian.wiki.facet#bullet-list-marker",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "com.atlassian.wiki.facet#ordered-list-marker",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "com.atlassian.wiki.facet#list-item-marker",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "com.atlassian.wiki.facet#list-item-text",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "com.atlassian.wiki.facet#horizontal-rule",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "com.atlassian.wiki.facet#admonition",
+      "featureClass": "block"
+    }
+  ],
+  "wasmLens": {
+    "$type": "org.relationaltext.lens",
+    "id": "com.atlassian.wiki.facet.wasm.v1",
+    "source": "raw:com.atlassian.wiki.facet",
+    "target": "com.atlassian.wiki.facet",
+    "wasmModule": {
+      "data": "",
+      "importFn": "import_confluence",
+      "exportFn": "export_confluence"
+    }
+  }
+}

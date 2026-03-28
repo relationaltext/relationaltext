@@ -1,0 +1,28 @@
+[package]
+name = "relationaltext-sqlite"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+name = "relationaltext_sqlite"
+
+[[example]]
+name = "relationaltext_sqlite"
+path = "src/cdylib/cdylib.rs"
+crate-type = ["cdylib"]
+required-features = ["loadable_extension"]
+
+[features]
+default = []
+loadable_extension = [
+    "rusqlite/loadable_extension",
+    "rusqlite/vtab",
+]
+
+[dependencies]
+rusqlite = { version = "0.32", features = ["functions", "vtab"] }
+serde_json = "1"
+relationaltext-core      = { path = "../relationaltext-core" }
+
+[dev-dependencies]
+rusqlite = { version = "0.32", features = ["functions", "vtab"] }

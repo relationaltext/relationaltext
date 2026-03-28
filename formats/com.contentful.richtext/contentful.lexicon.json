@@ -1,0 +1,115 @@
+{
+  "$type": "org.relationaltext.format-lexicon",
+  "id": "com.contentful.richtext.facet",
+  "version": "1.0",
+  "specUrl": "https://www.contentful.com/developers/docs/concepts/rich-text/",
+  "wasmLens": {
+    "$type": "org.relationaltext.lens",
+    "id": "com.contentful.richtext.wasm.v1",
+    "source": "raw:com.contentful.richtext.facet",
+    "target": "com.contentful.richtext.facet",
+    "wasmModule": {
+      "data": "",
+      "importFn": "import",
+      "exportFn": "export"
+    }
+  },
+  "features": [
+    {
+      "typeId": "com.contentful.richtext.facet#bold",
+      "featureClass": "inline",
+      "expandStart": true,
+      "expandEnd": true
+    },
+    {
+      "typeId": "com.contentful.richtext.facet#italic",
+      "featureClass": "inline",
+      "expandStart": true,
+      "expandEnd": true
+    },
+    {
+      "typeId": "com.contentful.richtext.facet#underline",
+      "featureClass": "inline",
+      "expandStart": true,
+      "expandEnd": true
+    },
+    {
+      "typeId": "com.contentful.richtext.facet#code",
+      "featureClass": "inline",
+      "expandStart": false,
+      "expandEnd": false
+    },
+    {
+      "typeId": "com.contentful.richtext.facet#superscript",
+      "featureClass": "inline",
+      "expandStart": false,
+      "expandEnd": false
+    },
+    {
+      "typeId": "com.contentful.richtext.facet#subscript",
+      "featureClass": "inline",
+      "expandStart": false,
+      "expandEnd": false
+    },
+    {
+      "typeId": "com.contentful.richtext.facet#hyperlink",
+      "featureClass": "entity"
+    },
+    {
+      "typeId": "com.contentful.richtext.facet#paragraph",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "com.contentful.richtext.facet#heading-1",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "com.contentful.richtext.facet#heading-2",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "com.contentful.richtext.facet#heading-3",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "com.contentful.richtext.facet#heading-4",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "com.contentful.richtext.facet#heading-5",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "com.contentful.richtext.facet#heading-6",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "com.contentful.richtext.facet#code-block",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "com.contentful.richtext.facet#list-item-text",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "com.contentful.richtext.facet#hr",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "com.contentful.richtext.facet#blockquote-marker",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "com.contentful.richtext.facet#bullet-list-marker",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "com.contentful.richtext.facet#ordered-list-marker",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "com.contentful.richtext.facet#list-item-marker",
+      "featureClass": "block"
+    }
+  ]
+}

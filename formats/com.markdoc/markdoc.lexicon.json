@@ -1,0 +1,112 @@
+{
+  "$type": "org.relationaltext.format-lexicon",
+  "id": "com.markdoc.facet",
+  "version": "1.0",
+  "specUrl": "https://markdoc.dev/",
+  "implicitBlockType": "paragraph",
+  "features": [
+    {
+      "typeId": "com.markdoc.facet#strong",
+      "featureClass": "inline",
+      "expandStart": true,
+      "expandEnd": true
+    },
+    {
+      "typeId": "com.markdoc.facet#emphasis",
+      "featureClass": "inline",
+      "expandStart": true,
+      "expandEnd": true
+    },
+    {
+      "typeId": "com.markdoc.facet#strikethrough",
+      "featureClass": "inline",
+      "expandStart": true,
+      "expandEnd": true
+    },
+    {
+      "typeId": "com.markdoc.facet#code-span",
+      "featureClass": "inline",
+      "expandStart": false,
+      "expandEnd": false
+    },
+    {
+      "typeId": "com.markdoc.facet#link",
+      "featureClass": "entity"
+    },
+    {
+      "typeId": "com.markdoc.facet#image",
+      "featureClass": "entity"
+    },
+    {
+      "typeId": "com.markdoc.facet#variable",
+      "featureClass": "entity"
+    },
+    {
+      "typeId": "com.markdoc.facet#inline-tag",
+      "featureClass": "entity"
+    },
+    {
+      "typeId": "com.markdoc.facet#line-break",
+      "featureClass": "entity"
+    },
+    {
+      "typeId": "com.markdoc.facet#paragraph",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "com.markdoc.facet#heading",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "com.markdoc.facet#code-block",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "com.markdoc.facet#blockquote-marker",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "com.markdoc.facet#bullet-list-marker",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "com.markdoc.facet#ordered-list-marker",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "com.markdoc.facet#list-item-marker",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "com.markdoc.facet#list-item-text",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "com.markdoc.facet#horizontal-rule",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "com.markdoc.facet#tag",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "com.markdoc.facet#frontmatter",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "com.markdoc.facet#conditional",
+      "featureClass": "block"
+    }
+  ],
+  "wasmLens": {
+    "$type": "org.relationaltext.lens",
+    "id": "com.markdoc.facet.wasm.v1",
+    "source": "raw:com.markdoc.facet",
+    "target": "com.markdoc.facet",
+    "wasmModule": {
+      "data": "",
+      "importFn": "import_markdoc",
+      "exportFn": "export_markdoc"
+    }
+  }
+}

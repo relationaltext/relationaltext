@@ -1,0 +1,128 @@
+{
+  "name": "relational-text",
+  "version": "0.1.0",
+  "description": "Rich text facets for the atproto ecosystem — text + typed annotations with CRDT-safe semantics",
+  "type": "module",
+  "main": "./dist/index.js",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./src/index.ts"
+    },
+    "./core": {
+      "import": "./dist/core.js",
+      "types": "./src/core.ts"
+    },
+    "./lens": {
+      "import": "./dist/lens.js",
+      "types": "./src/lens.ts"
+    },
+    "./types": {
+      "import": "./dist/types.js",
+      "types": "./src/types.ts"
+    },
+    "./wasm": {
+      "import": "./dist/wasm.js",
+      "types": "./src/wasm.ts"
+    },
+    "./format-wasm": {
+      "import": "./dist/format-wasm.js",
+      "types": "./src/format-wasm.ts"
+    },
+    "./registry": {
+      "import": "./dist/registry.js",
+      "types": "./src/registry.ts"
+    },
+    "./layers": {
+      "import": "./dist/layers.js",
+      "types": "./src/layers.ts"
+    },
+    "./automerge": {
+      "import": "./dist/automerge.js",
+      "types": "./src/automerge.ts"
+    },
+    "./automerge-stream": {
+      "import": "./dist/automerge-stream.js",
+      "types": "./src/automerge-stream.ts"
+    },
+    "./bluesky-utils": {
+      "import": "./dist/bluesky-utils.js",
+      "types": "./src/bluesky-utils.ts"
+    },
+    "./layered-document": {
+      "import": "./dist/layered-document.js",
+      "types": "./src/layered-document.ts"
+    },
+    "./concept-index": {
+      "import": "./dist/concept-index.js",
+      "types": "./src/concept-index.ts"
+    },
+    "./knowledge": {
+      "import": "./dist/knowledge.js",
+      "types": "./src/knowledge.ts"
+    },
+    "./annotation-overlay": {
+      "import": "./dist/annotation-overlay.js",
+      "types": "./src/annotation-overlay.ts"
+    },
+    "./experiment": {
+      "import": "./dist/experiment.js",
+      "types": "./src/experiment.ts"
+    },
+    "./ontology": {
+      "import": "./dist/ontology.js",
+      "types": "./src/ontology.ts"
+    },
+    "./alignment": {
+      "import": "./dist/alignment.js",
+      "types": "./src/alignment.ts"
+    }
+  },
+  "files": [
+    "dist/"
+  ],
+  "scripts": {
+    "build": "pnpm build:format-wasm && tsup && rm -rf dist/wasm && cp -r src/wasm dist/wasm",
+    "build:wasm": "wasm-pack build ../../crates/relationaltext-wasm --target bundler --out-dir ../../../packages/relational-text/src/wasm --out-name relationaltext_wasm",
+    "build:format-wasm": "tsx ../../scripts/build-format-wasm.ts",
+    "build:format-wasm:quill": "tsx ../../scripts/build-format-wasm.ts --format quill",
+    "build:format-wasm:prosemirror": "tsx ../../scripts/build-format-wasm.ts --format prosemirror",
+    "build:format-wasm:slate": "tsx ../../scripts/build-format-wasm.ts --format slate",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsup --dts-only"
+  },
+  "devDependencies": {
+    "@automerge/automerge": "^3.2.4",
+    "@types/node": "^22.19.15",
+    "@vitest/coverage-istanbul": "1.6.1",
+    "@vitest/coverage-v8": "1.6.1",
+    "tsup": "^8.5.1",
+    "tsx": "^4.21.0",
+    "typescript": "^5.4.0",
+    "vite-plugin-wasm": "^3.4.1",
+    "vite-tsconfig-paths": "^5.0.0",
+    "vitest": "^1.4.0"
+  },
+  "keywords": [
+    "atproto",
+    "bluesky",
+    "richtext",
+    "facets",
+    "wasm"
+  ],
+  "author": "Blaine Cook <me@bcook.ca>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/relationaltext/relationaltext"
+  },
+  "license": "Apache-2.0",
+  "peerDependencies": {
+    "@automerge/automerge": "^3.2.4"
+  },
+  "peerDependenciesMeta": {
+    "@automerge/automerge": {
+      "optional": true
+    }
+  }
+}

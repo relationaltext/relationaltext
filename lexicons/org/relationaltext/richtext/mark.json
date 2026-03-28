@@ -1,0 +1,42 @@
+{
+  "lexicon": 1,
+  "$type": "com.atproto.lexicon.schema",
+  "id": "org.relationaltext.richtext.mark",
+  "revision": 1,
+  "description": "An inline mark feature for rich text. Marks are inline annotations (bold, italic, code, etc.) that may freely overlap. Expand semantics control mark behavior at cursor boundaries per the Peritext model.",
+  "defs": {
+    "main": {
+      "type": "object",
+      "description": "An inline mark applied to a byte range in the document text.",
+      "required": ["name"],
+      "properties": {
+        "name": {
+          "type": "string",
+          "knownValues": [
+            "bold",
+            "italic",
+            "code",
+            "strikethrough",
+            "underline",
+            "superscript",
+            "subscript",
+            "keyboard"
+          ],
+          "description": "The mark type name. Known values are listed above; unknown values are preserved for forward compatibility."
+        },
+        "attrs": {
+          "type": "unknown",
+          "description": "Optional mark-specific attributes (e.g., { uri } for a link mark). Free-form JSON object."
+        },
+        "expandStart": {
+          "type": "boolean",
+          "description": "Whether this mark grows to include text inserted at its start boundary. Peritext expand semantics. If omitted, defaults apply per name: bold/italic/strikethrough/underline default to true; code/keyboard/superscript/subscript default to false."
+        },
+        "expandEnd": {
+          "type": "boolean",
+          "description": "Whether this mark grows to include text inserted at its end boundary. If omitted, defaults apply per name (same as expandStart)."
+        }
+      }
+    }
+  }
+}

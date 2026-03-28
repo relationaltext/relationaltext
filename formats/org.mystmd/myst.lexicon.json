@@ -1,0 +1,116 @@
+{
+  "$type": "org.relationaltext.format-lexicon",
+  "id": "org.mystmd.facet",
+  "version": "1.0",
+  "specUrl": "https://mystmd.org/guide/typography",
+  "implicitBlockType": "paragraph",
+  "features": [
+    {
+      "typeId": "org.mystmd.facet#strong",
+      "featureClass": "inline",
+      "expandStart": true,
+      "expandEnd": true
+    },
+    {
+      "typeId": "org.mystmd.facet#emphasis",
+      "featureClass": "inline",
+      "expandStart": true,
+      "expandEnd": true
+    },
+    {
+      "typeId": "org.mystmd.facet#strikethrough",
+      "featureClass": "inline",
+      "expandStart": true,
+      "expandEnd": true
+    },
+    {
+      "typeId": "org.mystmd.facet#code-span",
+      "featureClass": "inline",
+      "expandStart": false,
+      "expandEnd": false
+    },
+    {
+      "typeId": "org.mystmd.facet#link",
+      "featureClass": "entity"
+    },
+    {
+      "typeId": "org.mystmd.facet#image",
+      "featureClass": "entity"
+    },
+    {
+      "typeId": "org.mystmd.facet#role",
+      "featureClass": "entity"
+    },
+    {
+      "typeId": "org.mystmd.facet#math-inline",
+      "featureClass": "entity"
+    },
+    {
+      "typeId": "org.mystmd.facet#line-break",
+      "featureClass": "entity"
+    },
+    {
+      "typeId": "org.mystmd.facet#paragraph",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "org.mystmd.facet#heading",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "org.mystmd.facet#code-block",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "org.mystmd.facet#directive",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "org.mystmd.facet#admonition",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "org.mystmd.facet#math-block",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "org.mystmd.facet#blockquote-marker",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "org.mystmd.facet#bullet-list-marker",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "org.mystmd.facet#ordered-list-marker",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "org.mystmd.facet#list-item-marker",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "org.mystmd.facet#list-item-text",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "org.mystmd.facet#horizontal-rule",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "org.mystmd.facet#frontmatter",
+      "featureClass": "block"
+    }
+  ],
+  "wasmLens": {
+    "$type": "org.relationaltext.lens",
+    "id": "org.mystmd.facet.wasm.v1",
+    "source": "raw:org.mystmd.facet",
+    "target": "org.mystmd.facet",
+    "wasmModule": {
+      "data": "",
+      "importFn": "import_myst",
+      "exportFn": "export_myst"
+    }
+  }
+}

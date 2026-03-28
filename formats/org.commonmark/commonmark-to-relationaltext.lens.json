@@ -1,0 +1,49 @@
+{
+  "$type": "org.relationaltext.lens",
+  "id": "org.commonmark.to.relationaltext.v1",
+  "description": "Transform CommonMark facets to RelationalText canonical facets",
+  "source": "org.commonmark.facet",
+  "target": "org.relationaltext.facet",
+  "invertible": false,
+  "rules": [
+    { "match": { "name": "strong" },        "replace": { "name": "bold" } },
+    { "match": { "name": "emphasis" },      "replace": { "name": "italic" } },
+    { "match": { "name": "strikethrough" }, "replace": { "name": "strikethrough" } },
+    { "match": { "name": "code-span" },     "replace": { "name": "code" } },
+    { "match": { "name": "underline" },     "replace": { "name": "underline" } },
+    { "match": { "name": "superscript" },   "replace": { "name": "superscript" } },
+    { "match": { "name": "subscript" },     "replace": { "name": "subscript" } },
+    { "match": { "name": "keyboard" },      "replace": { "name": "keyboard" } },
+    {
+      "match": { "name": "ins" },
+      "replace": { "name": "insertion", "renameAttrs": { "cite": "author", "datetime": "date" } }
+    },
+    {
+      "match": { "name": "del" },
+      "replace": { "name": "deletion", "renameAttrs": { "cite": "author", "datetime": "date" } }
+    },
+    { "match": { "name": "mark" },          "replace": { "name": "highlight" } },
+    {
+      "match": { "name": "link" },
+      "replace": { "name": "link", "renameAttrs": { "uri": "url" } }
+    },
+    { "match": { "name": "image" },         "replace": { "name": "image" } },
+    { "match": { "name": "line-break" },    "replace": { "name": "line-break" } },
+    { "match": { "name": "paragraph" },     "replace": { "name": "paragraph" } },
+    { "match": { "name": "heading" },       "replace": { "name": "heading" } },
+    { "match": { "name": "unordered-list-item" }, "replace": { "name": "unordered-list-item" } },
+    { "match": { "name": "ordered-list-item" },   "replace": { "name": "ordered-list-item" } },
+    { "match": { "name": "blockquote" },    "replace": { "name": "blockquote" } },
+    { "match": { "name": "code-block" },    "replace": { "name": "code-block" } },
+    { "match": { "name": "horizontal-rule" }, "replace": { "name": "horizontal-rule" } },
+    { "match": { "name": "table" },         "replace": { "name": "table" } },
+    { "match": { "name": "definition-term" },   "replace": { "name": "definition-term" } },
+    { "match": { "name": "definition-detail" }, "replace": { "name": "definition-detail" } },
+    { "match": { "name": "list-item-text" },      "replace": { "name": "list-item-text" } },
+    { "match": { "name": "blockquote-marker" },   "replace": { "name": "blockquote-marker" } },
+    { "match": { "name": "list-item-marker" },    "replace": { "name": "list-item-marker" } },
+    { "match": { "name": "bullet-list-marker" },  "replace": { "name": "bullet-list-marker" } },
+    { "match": { "name": "ordered-list-marker" }, "replace": { "name": "ordered-list-marker" } },
+    { "match": { "name": "html-block" }, "replace": { "name": "html-block" } }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "name": "@relational-text/com.markdoc",
+  "version": "0.1.0",
+  "type": "module",
+  "exports": {
+    ".": "./ts/markdoc.ts",
+    "./*.json": "./*.json"
+  }
+}

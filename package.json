@@ -1,0 +1,12 @@
+{
+  "name": "relationaltext-workspace",
+  "private": true,
+  "scripts": {
+    "build": "pnpm --filter relational-text build",
+    "test": "pnpm --filter relational-text test",
+    "typecheck": "pnpm --filter relational-text typecheck",
+    "demo": "pnpm --filter demo dev",
+    "docs": "pnpm --filter docs dev"
+  },
+  "devDependencies": {}
+}

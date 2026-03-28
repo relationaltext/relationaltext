@@ -1,0 +1,19 @@
+[package]
+name = "relationaltext-wasm-format-adapter"
+version = "0.1.0"
+edition = "2021"
+description = "Memory boilerplate for RelationalText WASM format adapters"
+license = "MIT OR Apache-2.0"
+
+[lib]
+# rlib so examples (and external crates) can use the helper functions
+crate-type = ["rlib"]
+
+[[example]]
+name = "plaintext_adapter"
+# Compile as a bare WASM cdylib — no wasm-bindgen, just raw exports
+crate-type = ["cdylib"]
+
+[profile.release]
+opt-level = "s"
+lto = true

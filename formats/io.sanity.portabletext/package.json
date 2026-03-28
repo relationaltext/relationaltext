@@ -1,0 +1,9 @@
+{
+  "name": "@relational-text/io.sanity.portabletext",
+  "version": "0.1.0",
+  "type": "module",
+  "exports": {
+    ".": "./ts/sanity.ts",
+    "./*.json": "./*.json"
+  }
+}

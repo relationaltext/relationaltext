@@ -1,0 +1,19 @@
+{
+  "name": "relationaltext-docs",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vitepress dev",
+    "build": "vitepress build",
+    "preview": "vitepress preview"
+  },
+  "dependencies": {
+    "relational-text": "workspace:*"
+  },
+  "devDependencies": {
+    "vite-plugin-wasm": "^3.4.1",
+    "vite-tsconfig-paths": "^5.0.0",
+    "vitepress": "^1"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "name": "@relational-text/com.contentful.richtext",
+  "version": "0.1.0",
+  "type": "module",
+  "exports": {
+    ".": "./ts/contentful.ts",
+    "./*.json": "./*.json"
+  }
+}

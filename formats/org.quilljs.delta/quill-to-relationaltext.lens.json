@@ -1,0 +1,153 @@
+{
+  "$type": "org.relationaltext.lens",
+  "id": "org.quilljs.to.relationaltext.v1",
+  "description": "Transform Quill Delta facets to RelationalText facets",
+  "source": "org.quilljs.delta.facet",
+  "target": "org.relationaltext.facet",
+  "rules": [
+    {
+      "match": {
+        "name": "bold"
+      },
+      "replace": {
+        "name": "bold"
+      }
+    },
+    {
+      "match": {
+        "name": "italic"
+      },
+      "replace": {
+        "name": "italic"
+      }
+    },
+    {
+      "match": {
+        "name": "underline"
+      },
+      "replace": {
+        "name": "underline"
+      }
+    },
+    {
+      "match": {
+        "name": "strike"
+      },
+      "replace": {
+        "name": "strikethrough"
+      }
+    },
+    {
+      "match": {
+        "name": "code"
+      },
+      "replace": {
+        "name": "code"
+      }
+    },
+    {
+      "match": {
+        "name": "superscript"
+      },
+      "replace": {
+        "name": "superscript"
+      }
+    },
+    {
+      "match": {
+        "name": "subscript"
+      },
+      "replace": {
+        "name": "subscript"
+      }
+    },
+    {
+      "match": {
+        "name": "link"
+      },
+      "replace": {
+        "name": "link"
+      }
+    },
+    {
+      "match": {
+        "name": "image"
+      },
+      "replace": {
+        "name": "image"
+      }
+    },
+    {
+      "match": {
+        "name": "paragraph"
+      },
+      "replace": {
+        "name": "paragraph"
+      }
+    },
+    {
+      "match": {
+        "name": "header"
+      },
+      "replace": {
+        "name": "heading"
+      }
+    },
+    {
+      "match": {
+        "name": "code-block"
+      },
+      "replace": {
+        "name": "code-block"
+      }
+    },
+    {
+      "match": {
+        "name": "list-item-text"
+      },
+      "replace": {
+        "name": "list-item-text"
+      }
+    },
+    {
+      "match": {
+        "name": "bullet-list-marker"
+      },
+      "replace": {
+        "name": "bullet-list-marker"
+      }
+    },
+    {
+      "match": {
+        "name": "ordered-list-marker"
+      },
+      "replace": {
+        "name": "ordered-list-marker"
+      }
+    },
+    {
+      "match": {
+        "name": "list-item-marker"
+      },
+      "replace": {
+        "name": "list-item-marker"
+      }
+    },
+    {
+      "match": {
+        "name": "unordered-list-item"
+      },
+      "replace": {
+        "name": "unordered-list-item"
+      }
+    },
+    {
+      "match": {
+        "name": "ordered-list-item"
+      },
+      "replace": {
+        "name": "ordered-list-item"
+      }
+    }
+  ]
+}

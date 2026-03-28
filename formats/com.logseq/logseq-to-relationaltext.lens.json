@@ -1,0 +1,83 @@
+{
+  "$type": "org.relationaltext.lens",
+  "id": "com.logseq.to.relationaltext.v1",
+  "description": "Transform Logseq facets to RelationalText facets",
+  "source": "com.logseq.facet",
+  "target": "org.relationaltext.facet",
+  "invertible": false,
+  "rules": [
+    {
+      "match": {
+        "name": "bold"
+      },
+      "replace": {
+        "name": "bold"
+      }
+    },
+    {
+      "match": {
+        "name": "italic"
+      },
+      "replace": {
+        "name": "italic"
+      }
+    },
+    {
+      "match": {
+        "name": "strikethrough"
+      },
+      "replace": {
+        "name": "strikethrough"
+      }
+    },
+    {
+      "match": {
+        "name": "code"
+      },
+      "replace": {
+        "name": "code"
+      }
+    },
+    {
+      "match": {
+        "name": "link"
+      },
+      "replace": {
+        "name": "link",
+        "renameAttrs": {
+          "uri": "url"
+        }
+      }
+    },
+    {
+      "match": {
+        "name": "page-ref"
+      },
+      "replace": {
+        "name": "link",
+        "renameAttrs": {
+          "title": "url"
+        }
+      }
+    },
+    {
+      "match": {
+        "name": "tag"
+      },
+      "replace": {
+        "name": "hashtag",
+        "renameAttrs": {
+          "tagName": "tag"
+        }
+      }
+    },
+    {
+      "match": {
+        "name": "block"
+      },
+      "replace": {
+        "name": "list-item-text"
+      }
+    }
+  ]
+}

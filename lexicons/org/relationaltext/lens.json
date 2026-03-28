@@ -1,0 +1,164 @@
+{
+  "lexicon": 1,
+  "$type": "com.atproto.lexicon.schema",
+  "id": "org.relationaltext.lens",
+  "description": "A bidirectional, composable transformation between two feature lexicon namespaces.",
+  "defs": {
+    "main": {
+      "type": "record",
+      "description": "A lens record stored in an ATProto PDS. Declarative rules or a WASM module ref.",
+      "key": "nsid",
+      "record": {
+        "type": "object",
+        "required": ["id", "source", "target"],
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "Unique identifier for this lens, e.g. 'org.commonmark.to.html.v1'."
+          },
+          "version": {
+            "type": "string",
+            "description": "Semver version of this lens, e.g. '1.0'. Metadata only — not used during application or composition."
+          },
+          "description": {
+            "type": "string",
+            "description": "Human-readable description of what this lens transforms."
+          },
+          "source": {
+            "type": "string",
+            "description": "Source lexicon NSID, e.g. 'org.commonmark.facet'."
+          },
+          "target": {
+            "type": "string",
+            "description": "Target lexicon NSID, e.g. 'org.w3c.html.facet'."
+          },
+          "rules": {
+            "type": "array",
+            "items": { "type": "ref", "ref": "#rule" },
+            "description": "Declarative transform rules. Mutually exclusive with wasmModule."
+          },
+          "passthrough": {
+            "type": "string",
+            "knownValues": ["keep", "drop"],
+            "default": "keep",
+            "description": "Behavior for features not matched by any rule."
+          },
+          "wasmModule": {
+            "type": "ref",
+            "ref": "#wasmLensRef",
+            "description": "WASM module reference for complex transforms. Takes precedence over rules."
+          }
+        }
+      }
+    },
+    "rule": {
+      "type": "object",
+      "description": "A single transform rule: match a feature and replace or drop it.",
+      "required": ["match"],
+      "properties": {
+        "match": {
+          "type": "ref",
+          "ref": "#featurePattern"
+        },
+        "replace": {
+          "type": "union",
+          "refs": ["#featureReplacement"],
+          "description": "The replacement descriptor, or null to drop the feature entirely."
+        }
+      }
+    },
+    "featurePattern": {
+      "type": "object",
+      "description": "Pattern to match against a feature's $type and optional name field.",
+      "required": [],
+      "properties": {
+        "typeId": {
+          "type": "string",
+          "description": "$type string, compound key '$type#name', or ATProto compound type 'app.bsky.richtext.facet#mention'. '@version' suffixes are stripped before comparison (e.g. 'org.commonmark.facet#strong@0.31' matches a feature with name 'strong'). If omitted, defaults to the lens's 'source' NSID."
+        },
+        "name": {
+          "type": "string",
+          "description": "If set, also match the feature's 'name' data field. '@version' suffixes are stripped on both sides."
+        }
+      }
+    },
+    "featureReplacement": {
+      "type": "object",
+      "description": "How to rewrite a matched feature.",
+      "required": [],
+      "properties": {
+        "typeId": {
+          "type": "string",
+          "description": "New $type for the output feature. If omitted, defaults to the lens's 'target' NSID."
+        },
+        "name": {
+          "type": "string",
+          "description": "New name field value (omit to clear the name field)."
+        },
+        "renameAttrs": {
+          "type": "object",
+          "description": "Rename attribute keys: { fromKey: toKey }."
+        },
+        "addAttrs": {
+          "type": "object",
+          "description": "Inject constant attributes into the output feature."
+        },
+        "dropAttrs": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Remove these attribute keys from the output feature."
+        },
+        "keepAttrs": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Whitelist: keep only these attribute keys (plus $type and name). Applied last, after all other operations. Prefer over dropAttrs when the full attribute set is known."
+        },
+        "mapAttrValue": {
+          "type": "object",
+          "description": "Transform attribute values by key. Each value is an attrValueOp descriptor. Applied after renameAttrs and before addAttrs."
+        }
+      }
+    },
+    "attrValueOp": {
+      "type": "object",
+      "description": "A value transform operation. 'op' selects the transform; 'value' is the operand (number for numeric ops, string for string ops; omit for unary ops). Numeric ops (add/subtract/multiply) are no-ops on non-numbers; string ops (prefix/suffix) are no-ops on non-strings; negate is a no-op on non-booleans.",
+      "required": ["op"],
+      "properties": {
+        "op": {
+          "type": "string",
+          "knownValues": ["add", "subtract", "multiply", "prefix", "suffix", "negate", "to-string", "to-number", "to-boolean"]
+        },
+        "value": {
+          "description": "Operand: number for add/subtract/multiply; string for prefix/suffix."
+        }
+      }
+    },
+    "wasmLensRef": {
+      "type": "object",
+      "description": "Reference to a WebAssembly lens module binary.",
+      "properties": {
+        "cid": {
+          "type": "string",
+          "description": "Content-addressed CID of the WASM binary (for ATProto blob storage)."
+        },
+        "url": {
+          "type": "string",
+          "format": "uri",
+          "description": "HTTP URL for fetching the WASM binary (URL fallback)."
+        },
+        "data": {
+          "type": "string",
+          "description": "Inline base64-encoded WASM binary (for testing and small modules)."
+        },
+        "importFn": {
+          "type": "string",
+          "description": "Name of the WASM export function: rawString → DocumentJSON. Called when lens source starts with 'raw:'."
+        },
+        "exportFn": {
+          "type": "string",
+          "description": "Name of the WASM export function: DocumentJSON → rawString. Called when lens target starts with 'raw:'."
+        }
+      }
+    }
+  }
+}

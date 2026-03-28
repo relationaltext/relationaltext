@@ -1,0 +1,90 @@
+{
+  "lexicon": 1,
+  "id": "org.relationaltext.format-lexicon",
+  "defs": {
+    "main": {
+      "type": "record",
+      "description": "Defines the feature types in a format namespace (e.g. org.commonmark.facet). Can be stored as an ATProto record, fetched from a URL, and validated against this schema.",
+      "key": "literal:self",
+      "record": {
+        "type": "object",
+        "required": [
+          "id",
+          "features"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "Namespace NSID, e.g. org.commonmark.facet"
+          },
+          "version": {
+            "type": "string",
+            "description": "Spec version string, e.g. 0.31"
+          },
+          "specUrl": {
+            "type": "string",
+            "format": "uri",
+            "description": "URL to the authoritative specification"
+          },
+          "features": {
+            "type": "array",
+            "items": {
+              "type": "ref",
+              "ref": "#feature"
+            }
+          },
+          "wasmLens": {
+            "type": "ref",
+            "ref": "org.relationaltext.lens#main",
+            "description": "WASM lens: raw:{id} ↔ {id}. source/target use the 'raw:' prefix convention."
+          },
+          "lens": {
+            "type": "ref",
+            "ref": "org.relationaltext.lens#main",
+            "description": "Declarative lens: {id} ↔ org.relationaltext.facet."
+          }
+        }
+      }
+    },
+    "feature": {
+      "type": "object",
+      "description": "Behavioral descriptor for a single feature type in this namespace.",
+      "required": [
+        "typeId"
+      ],
+      "properties": {
+        "typeId": {
+          "type": "string",
+          "description": "$type#name compound key, e.g. org.commonmark.facet#strong"
+        },
+        "featureClass": {
+          "type": "string",
+          "knownValues": [
+            "inline",
+            "block",
+            "entity",
+            "comment",
+            "meta"
+          ],
+          "description": "Semantic class: inline span, block marker, entity (mention/link/tag), comment (e.g. HTML <!-- -->), or meta (e.g. doctype; document-level or non-structural)"
+        },
+        "expandStart": {
+          "type": "boolean",
+          "description": "Peritext expand-start semantics: should this mark expand when text is inserted at its start boundary?"
+        },
+        "expandEnd": {
+          "type": "boolean",
+          "description": "Peritext expand-end semantics: should this mark expand when text is inserted at its end boundary?"
+        },
+        "void": {
+          "type": "boolean",
+          "description": "If true, this feature cannot have child content (e.g. HTML void elements like hr, img, br). Used by import/export to avoid attributing following content to this block or inline."
+        },
+        "specSection": {
+          "type": "string",
+          "description": "Section reference in the authoritative spec (for documentation)"
+        }
+      }
+    }
+  }
+}

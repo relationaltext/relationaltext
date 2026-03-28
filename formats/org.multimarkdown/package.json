@@ -1,0 +1,9 @@
+{
+  "name": "@relational-text/org.multimarkdown",
+  "version": "0.1.0",
+  "type": "module",
+  "exports": {
+    ".": "./ts/multimarkdown.ts",
+    "./*.json": "./*.json"
+  }
+}

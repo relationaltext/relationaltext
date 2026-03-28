@@ -1,0 +1,9 @@
+{
+  "name": "@relational-text/rocks.slate",
+  "version": "0.1.0",
+  "type": "module",
+  "exports": {
+    ".": "./ts/slate.ts",
+    "./*.json": "./*.json"
+  }
+}

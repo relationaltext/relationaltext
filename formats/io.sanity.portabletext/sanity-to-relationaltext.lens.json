@@ -1,0 +1,223 @@
+{
+  "$type": "org.relationaltext.lens",
+  "id": "io.sanity.to.relationaltext.v1",
+  "description": "Transform Sanity Portable Text facets to RelationalText facets",
+  "source": "io.sanity.portabletext.facet",
+  "target": "org.relationaltext.facet",
+  "invertible": false,
+  "rules": [
+    {
+      "match": {
+        "name": "strong"
+      },
+      "replace": {
+        "name": "bold"
+      }
+    },
+    {
+      "match": {
+        "name": "em"
+      },
+      "replace": {
+        "name": "italic"
+      }
+    },
+    {
+      "match": {
+        "name": "underline"
+      },
+      "replace": {
+        "name": "underline"
+      }
+    },
+    {
+      "match": {
+        "name": "strike-through"
+      },
+      "replace": {
+        "name": "strikethrough"
+      }
+    },
+    {
+      "match": {
+        "name": "code"
+      },
+      "replace": {
+        "name": "code"
+      }
+    },
+    {
+      "match": {
+        "name": "sup"
+      },
+      "replace": {
+        "name": "superscript"
+      }
+    },
+    {
+      "match": {
+        "name": "sub"
+      },
+      "replace": {
+        "name": "subscript"
+      }
+    },
+    {
+      "match": {
+        "name": "link"
+      },
+      "replace": {
+        "name": "link",
+        "renameAttrs": {
+          "href": "url"
+        }
+      }
+    },
+    {
+      "match": {
+        "name": "normal"
+      },
+      "replace": {
+        "name": "paragraph"
+      }
+    },
+    {
+      "match": {
+        "name": "h1"
+      },
+      "replace": {
+        "name": "heading",
+        "addAttrs": {
+          "level": 1
+        }
+      }
+    },
+    {
+      "match": {
+        "name": "h2"
+      },
+      "replace": {
+        "name": "heading",
+        "addAttrs": {
+          "level": 2
+        }
+      }
+    },
+    {
+      "match": {
+        "name": "h3"
+      },
+      "replace": {
+        "name": "heading",
+        "addAttrs": {
+          "level": 3
+        }
+      }
+    },
+    {
+      "match": {
+        "name": "h4"
+      },
+      "replace": {
+        "name": "heading",
+        "addAttrs": {
+          "level": 4
+        }
+      }
+    },
+    {
+      "match": {
+        "name": "h5"
+      },
+      "replace": {
+        "name": "heading",
+        "addAttrs": {
+          "level": 5
+        }
+      }
+    },
+    {
+      "match": {
+        "name": "h6"
+      },
+      "replace": {
+        "name": "heading",
+        "addAttrs": {
+          "level": 6
+        }
+      }
+    },
+    {
+      "match": {
+        "name": "code-block"
+      },
+      "replace": {
+        "name": "code-block"
+      }
+    },
+    {
+      "match": {
+        "name": "list-item-text"
+      },
+      "replace": {
+        "name": "list-item-text"
+      }
+    },
+    {
+      "match": {
+        "name": "horizontal-rule"
+      },
+      "replace": {
+        "name": "horizontal-rule"
+      }
+    },
+    {
+      "match": {
+        "name": "blockquote-marker"
+      },
+      "replace": {
+        "name": "blockquote-marker"
+      }
+    },
+    {
+      "match": {
+        "name": "bullet-list-marker"
+      },
+      "replace": {
+        "name": "bullet-list-marker"
+      }
+    },
+    {
+      "match": {
+        "name": "ordered-list-marker"
+      },
+      "replace": {
+        "name": "ordered-list-marker"
+      }
+    },
+    {
+      "match": {
+        "name": "list-item-marker"
+      },
+      "replace": {
+        "name": "list-item-marker"
+      }
+    },
+    {
+      "match": {
+        "name": "unordered-list-item"
+      },
+      "replace": {
+        "name": "unordered-list-item"
+      }
+    },
+    {
+      "match": {
+        "name": "ordered-list-item"
+      },
+      "replace": {
+        "name": "ordered-list-item"
+      }
+    }
+  ]
+}

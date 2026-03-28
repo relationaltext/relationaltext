@@ -1,0 +1,9 @@
+{
+  "name": "@relational-text/org.mystmd",
+  "version": "0.1.0",
+  "type": "module",
+  "exports": {
+    ".": "./ts/myst.ts",
+    "./*.json": "./*.json"
+  }
+}

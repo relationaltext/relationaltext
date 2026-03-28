@@ -1,0 +1,33 @@
+{
+  "name": "relational-text-react",
+  "version": "0.1.0",
+  "description": "React component for rendering RelationalText documents as semantic HTML with customizable component overrides",
+  "type": "module",
+  "license": "Apache-2.0",
+  "author": "Blaine Cook <me@bcook.ca>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/relationaltext/relationaltext",
+    "directory": "packages/relational-text-react"
+  },
+  "scripts": {
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "main": "./src/index.ts",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "files": ["src/"],
+  "peerDependencies": {
+    "react": ">=18"
+  },
+  "dependencies": {
+    "relational-text": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/react": "^18",
+    "typescript": "^5",
+    "vitest": "^1.4.0"
+  }
+}

@@ -1,0 +1,210 @@
+{
+  "$type": "org.relationaltext.lens",
+  "id": "org.pandoc.to.relationaltext.v1",
+  "description": "Transform Pandoc Markdown facets to RelationalText facets",
+  "source": "org.pandoc.facet",
+  "target": "org.relationaltext.facet",
+  "passthrough": "keep",
+  "rules": [
+    {
+      "match": {
+        "name": "Strong"
+      },
+      "replace": {
+        "name": "bold"
+      }
+    },
+    {
+      "match": {
+        "name": "Emph"
+      },
+      "replace": {
+        "name": "italic"
+      }
+    },
+    {
+      "match": {
+        "name": "Strikeout"
+      },
+      "replace": {
+        "name": "strikethrough"
+      }
+    },
+    {
+      "match": {
+        "name": "Superscript"
+      },
+      "replace": {
+        "name": "superscript"
+      }
+    },
+    {
+      "match": {
+        "name": "Subscript"
+      },
+      "replace": {
+        "name": "subscript"
+      }
+    },
+    {
+      "match": {
+        "name": "Code"
+      },
+      "replace": {
+        "name": "code"
+      }
+    },
+    {
+      "match": {
+        "name": "Span"
+      },
+      "replace": {
+        "name": "span"
+      }
+    },
+    {
+      "match": {
+        "name": "Link"
+      },
+      "replace": {
+        "name": "link"
+      }
+    },
+    {
+      "match": {
+        "name": "Image"
+      },
+      "replace": {
+        "name": "image"
+      }
+    },
+    {
+      "match": {
+        "name": "LineBreak"
+      },
+      "replace": {
+        "name": "line-break"
+      }
+    },
+    {
+      "match": {
+        "name": "Note"
+      },
+      "replace": {
+        "name": "footnote-ref"
+      }
+    },
+    {
+      "match": {
+        "name": "Para"
+      },
+      "replace": {
+        "name": "paragraph"
+      }
+    },
+    {
+      "match": {
+        "name": "Header"
+      },
+      "replace": {
+        "name": "heading"
+      }
+    },
+    {
+      "match": {
+        "name": "CodeBlock"
+      },
+      "replace": {
+        "name": "code-block"
+      }
+    },
+    {
+      "match": {
+        "name": "BlockQuote"
+      },
+      "replace": {
+        "name": "blockquote-marker"
+      }
+    },
+    {
+      "match": {
+        "name": "BulletList"
+      },
+      "replace": {
+        "name": "bullet-list-marker"
+      }
+    },
+    {
+      "match": {
+        "name": "OrderedList"
+      },
+      "replace": {
+        "name": "ordered-list-marker"
+      }
+    },
+    {
+      "match": {
+        "name": "list-item-marker"
+      },
+      "replace": {
+        "name": "list-item-marker"
+      }
+    },
+    {
+      "match": {
+        "name": "list-item-text"
+      },
+      "replace": {
+        "name": "list-item-text"
+      }
+    },
+    {
+      "match": {
+        "name": "HorizontalRule"
+      },
+      "replace": {
+        "name": "horizontal-rule"
+      }
+    },
+    {
+      "match": {
+        "name": "footnote-def"
+      },
+      "replace": {
+        "name": "footnote-def"
+      }
+    },
+    {
+      "match": {
+        "name": "Div"
+      },
+      "replace": {
+        "name": "div"
+      }
+    },
+    {
+      "match": {
+        "name": "Meta"
+      },
+      "replace": {
+        "name": "metadata"
+      }
+    },
+    {
+      "match": {
+        "name": "unordered-list-item"
+      },
+      "replace": {
+        "name": "unordered-list-item"
+      }
+    },
+    {
+      "match": {
+        "name": "ordered-list-item"
+      },
+      "replace": {
+        "name": "ordered-list-item"
+      }
+    }
+  ]
+}

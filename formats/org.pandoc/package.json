@@ -1,0 +1,9 @@
+{
+  "name": "@relational-text/org.pandoc",
+  "version": "0.1.0",
+  "type": "module",
+  "exports": {
+    ".": "./ts/pandoc.ts",
+    "./*.json": "./*.json"
+  }
+}

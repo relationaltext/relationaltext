@@ -1,0 +1,9 @@
+{
+  "name": "@relationaltext/mediawiki-format",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    "./ref-expander": "./ts/ref-expander.ts"
+  }
+}

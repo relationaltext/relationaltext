@@ -1,0 +1,9 @@
+{
+  "name": "@relational-text/com.gitlab",
+  "version": "0.1.0",
+  "type": "module",
+  "exports": {
+    ".": "./ts/gitlab.ts",
+    "./*.json": "./*.json"
+  }
+}

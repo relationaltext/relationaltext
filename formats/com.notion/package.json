@@ -1,0 +1,9 @@
+{
+  "name": "@relational-text/com.notion",
+  "version": "0.1.0",
+  "type": "module",
+  "exports": {
+    ".": "./ts/notion.ts",
+    "./*.json": "./*.json"
+  }
+}

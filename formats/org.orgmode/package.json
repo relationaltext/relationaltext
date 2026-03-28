@@ -1,0 +1,9 @@
+{
+  "name": "@relational-text/org.orgmode",
+  "version": "0.1.0",
+  "type": "module",
+  "exports": {
+    ".": "./ts/org.ts",
+    "./*.json": "./*.json"
+  }
+}

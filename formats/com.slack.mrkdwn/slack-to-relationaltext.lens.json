@@ -1,0 +1,114 @@
+{
+  "$type": "org.relationaltext.lens",
+  "id": "com.slack.to.relationaltext.v1",
+  "description": "Transform Slack mrkdwn facets to RelationalText facets",
+  "source": "com.slack.mrkdwn.facet",
+  "target": "org.relationaltext.facet",
+  "passthrough": "keep",
+  "rules": [
+    {
+      "match": {
+        "name": "bold"
+      },
+      "replace": {
+        "name": "bold"
+      }
+    },
+    {
+      "match": {
+        "name": "italic"
+      },
+      "replace": {
+        "name": "italic"
+      }
+    },
+    {
+      "match": {
+        "name": "strikethrough"
+      },
+      "replace": {
+        "name": "strikethrough"
+      }
+    },
+    {
+      "match": {
+        "name": "code"
+      },
+      "replace": {
+        "name": "code"
+      }
+    },
+    {
+      "match": {
+        "name": "link"
+      },
+      "replace": {
+        "name": "link"
+      }
+    },
+    {
+      "match": {
+        "name": "paragraph"
+      },
+      "replace": {
+        "name": "paragraph"
+      }
+    },
+    {
+      "match": {
+        "name": "code-block"
+      },
+      "replace": {
+        "name": "code-block"
+      }
+    },
+    {
+      "match": {
+        "name": "list-item-text"
+      },
+      "replace": {
+        "name": "list-item-text"
+      }
+    },
+    {
+      "match": {
+        "name": "blockquote-marker"
+      },
+      "replace": {
+        "name": "blockquote-marker"
+      }
+    },
+    {
+      "match": {
+        "name": "bullet-list-marker"
+      },
+      "replace": {
+        "name": "bullet-list-marker"
+      }
+    },
+    {
+      "match": {
+        "name": "list-item-marker"
+      },
+      "replace": {
+        "name": "list-item-marker"
+      }
+    },
+    {
+      "match": {
+        "name": "unordered-list-item"
+      },
+      "replace": {
+        "name": "unordered-list-item"
+      }
+    },
+    {
+      "match": {
+        "name": "ordered-list-item"
+      },
+      "replace": {
+        "name": "ordered-list-item"
+      }
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "name": "@relational-text/org.w3c.html",
+  "version": "0.1.0",
+  "type": "module",
+  "exports": {
+    ".": "./ts/html.ts",
+    "./*.json": "./*.json"
+  }
+}

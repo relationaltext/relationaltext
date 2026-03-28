@@ -1,0 +1,215 @@
+{
+  "$type": "org.relationaltext.lens",
+  "id": "com.contentful.richtext.to.relationaltext.v1",
+  "description": "Transform Contentful Rich Text facets to RelationalText facets",
+  "source": "com.contentful.richtext.facet",
+  "target": "org.relationaltext.facet",
+  "invertible": false,
+  "rules": [
+    {
+      "match": {
+        "name": "bold"
+      },
+      "replace": {
+        "name": "bold"
+      }
+    },
+    {
+      "match": {
+        "name": "italic"
+      },
+      "replace": {
+        "name": "italic"
+      }
+    },
+    {
+      "match": {
+        "name": "underline"
+      },
+      "replace": {
+        "name": "underline"
+      }
+    },
+    {
+      "match": {
+        "name": "code"
+      },
+      "replace": {
+        "name": "code"
+      }
+    },
+    {
+      "match": {
+        "name": "superscript"
+      },
+      "replace": {
+        "name": "superscript"
+      }
+    },
+    {
+      "match": {
+        "name": "subscript"
+      },
+      "replace": {
+        "name": "subscript"
+      }
+    },
+    {
+      "match": {
+        "name": "hyperlink"
+      },
+      "replace": {
+        "name": "link",
+        "renameAttrs": {
+          "uri": "url"
+        }
+      }
+    },
+    {
+      "match": {
+        "name": "paragraph"
+      },
+      "replace": {
+        "name": "paragraph"
+      }
+    },
+    {
+      "match": {
+        "name": "heading-1"
+      },
+      "replace": {
+        "name": "heading",
+        "addAttrs": {
+          "level": 1
+        }
+      }
+    },
+    {
+      "match": {
+        "name": "heading-2"
+      },
+      "replace": {
+        "name": "heading",
+        "addAttrs": {
+          "level": 2
+        }
+      }
+    },
+    {
+      "match": {
+        "name": "heading-3"
+      },
+      "replace": {
+        "name": "heading",
+        "addAttrs": {
+          "level": 3
+        }
+      }
+    },
+    {
+      "match": {
+        "name": "heading-4"
+      },
+      "replace": {
+        "name": "heading",
+        "addAttrs": {
+          "level": 4
+        }
+      }
+    },
+    {
+      "match": {
+        "name": "heading-5"
+      },
+      "replace": {
+        "name": "heading",
+        "addAttrs": {
+          "level": 5
+        }
+      }
+    },
+    {
+      "match": {
+        "name": "heading-6"
+      },
+      "replace": {
+        "name": "heading",
+        "addAttrs": {
+          "level": 6
+        }
+      }
+    },
+    {
+      "match": {
+        "name": "code-block"
+      },
+      "replace": {
+        "name": "code-block"
+      }
+    },
+    {
+      "match": {
+        "name": "list-item-text"
+      },
+      "replace": {
+        "name": "list-item-text"
+      }
+    },
+    {
+      "match": {
+        "name": "hr"
+      },
+      "replace": {
+        "name": "horizontal-rule"
+      }
+    },
+    {
+      "match": {
+        "name": "blockquote-marker"
+      },
+      "replace": {
+        "name": "blockquote-marker"
+      }
+    },
+    {
+      "match": {
+        "name": "bullet-list-marker"
+      },
+      "replace": {
+        "name": "bullet-list-marker"
+      }
+    },
+    {
+      "match": {
+        "name": "ordered-list-marker"
+      },
+      "replace": {
+        "name": "ordered-list-marker"
+      }
+    },
+    {
+      "match": {
+        "name": "list-item-marker"
+      },
+      "replace": {
+        "name": "list-item-marker"
+      }
+    },
+    {
+      "match": {
+        "name": "unordered-list-item"
+      },
+      "replace": {
+        "name": "unordered-list-item"
+      }
+    },
+    {
+      "match": {
+        "name": "ordered-list-item"
+      },
+      "replace": {
+        "name": "ordered-list-item"
+      }
+    }
+  ]
+}

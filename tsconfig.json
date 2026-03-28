@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "lib": ["ES2022", "DOM"],
+    "strict": true,
+    "skipLibCheck": true,
+    "resolveJsonModule": true,
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "paths": {
+      "relational-text":                 ["./packages/relational-text/src/index.ts"],
+      "relational-text/core":            ["./packages/relational-text/src/core.ts"],
+      "relational-text/lens":            ["./packages/relational-text/src/lens.ts"],
+      "relational-text/types":           ["./packages/relational-text/src/types.ts"],
+      "relational-text/wasm":            ["./packages/relational-text/src/wasm.ts"],
+      "relational-text/format-wasm":     ["./packages/relational-text/src/format-wasm.ts"],
+      "relational-text/lenses/builtins": ["./packages/relational-text/src/lenses/builtins.ts"]
+    }
+  }
+}

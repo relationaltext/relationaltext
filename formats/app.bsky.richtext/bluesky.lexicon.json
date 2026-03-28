@@ -1,0 +1,30 @@
+{
+  "$type": "org.relationaltext.format-lexicon",
+  "id": "app.bsky.richtext.facet",
+  "specUrl": "https://atproto.com/lexicons/app-bsky-richtext",
+  "wasmLens": {
+    "$type": "org.relationaltext.lens",
+    "id": "app.bsky.richtext.wasm.v1",
+    "source": "raw:app.bsky.richtext.facet",
+    "target": "app.bsky.richtext.facet",
+    "wasmModule": {
+      "data": "",
+      "importFn": "import",
+      "exportFn": "export"
+    }
+  },
+  "features": [
+    {
+      "typeId": "app.bsky.richtext.facet#mention",
+      "featureClass": "entity"
+    },
+    {
+      "typeId": "app.bsky.richtext.facet#link",
+      "featureClass": "entity"
+    },
+    {
+      "typeId": "app.bsky.richtext.facet#tag",
+      "featureClass": "entity"
+    }
+  ]
+}

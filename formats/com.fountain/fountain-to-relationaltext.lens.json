@@ -1,0 +1,136 @@
+{
+  "$type": "org.relationaltext.lens",
+  "id": "com.fountain.to.relationaltext.v1",
+  "description": "Transform Fountain screenplay facets to RelationalText facets",
+  "source": "com.fountain.facet",
+  "target": "org.relationaltext.facet",
+  "passthrough": "keep",
+  "rules": [
+    {
+      "match": {
+        "name": "bold"
+      },
+      "replace": {
+        "name": "bold"
+      }
+    },
+    {
+      "match": {
+        "name": "italic"
+      },
+      "replace": {
+        "name": "italic"
+      }
+    },
+    {
+      "match": {
+        "name": "underline"
+      },
+      "replace": {
+        "name": "underline"
+      }
+    },
+    {
+      "match": {
+        "name": "note"
+      },
+      "replace": {
+        "name": "note"
+      }
+    },
+    {
+      "match": {
+        "name": "action"
+      },
+      "replace": {
+        "name": "paragraph"
+      }
+    },
+    {
+      "match": {
+        "name": "scene-heading"
+      },
+      "replace": {
+        "name": "heading",
+        "addAttrs": {
+          "level": 2
+        }
+      }
+    },
+    {
+      "match": {
+        "name": "character"
+      },
+      "replace": {
+        "name": "heading",
+        "addAttrs": {
+          "level": 3
+        }
+      }
+    },
+    {
+      "match": {
+        "name": "parenthetical"
+      },
+      "replace": {
+        "name": "paragraph"
+      }
+    },
+    {
+      "match": {
+        "name": "dialogue"
+      },
+      "replace": {
+        "name": "paragraph"
+      }
+    },
+    {
+      "match": {
+        "name": "transition"
+      },
+      "replace": {
+        "name": "paragraph"
+      }
+    },
+    {
+      "match": {
+        "name": "lyric"
+      },
+      "replace": {
+        "name": "paragraph"
+      }
+    },
+    {
+      "match": {
+        "name": "page-break"
+      },
+      "replace": {
+        "name": "horizontal-rule"
+      }
+    },
+    {
+      "match": {
+        "name": "section"
+      },
+      "replace": {
+        "name": "heading"
+      }
+    },
+    {
+      "match": {
+        "name": "synopsis"
+      },
+      "replace": {
+        "name": "synopsis"
+      }
+    },
+    {
+      "match": {
+        "name": "title-page"
+      },
+      "replace": {
+        "name": "title-page"
+      }
+    }
+  ]
+}

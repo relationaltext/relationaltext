@@ -1,0 +1,9 @@
+{
+  "name": "@relational-text/org.prosemirror",
+  "version": "0.1.0",
+  "type": "module",
+  "exports": {
+    ".": "./ts/prosemirror.ts",
+    "./*.json": "./*.json"
+  }
+}

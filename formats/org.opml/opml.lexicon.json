@@ -1,0 +1,32 @@
+{
+  "$type": "org.relationaltext.format-lexicon",
+  "id": "org.opml.facet",
+  "version": "1.0",
+  "specUrl": "http://opml.org/spec2.opml",
+  "implicitBlockType": "outline",
+  "features": [
+    {
+      "typeId": "org.opml.facet#outline",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "org.opml.facet#heading",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "org.opml.facet#feed",
+      "featureClass": "block"
+    }
+  ],
+  "wasmLens": {
+    "$type": "org.relationaltext.lens",
+    "id": "org.opml.facet.wasm.v1",
+    "source": "raw:org.opml.facet",
+    "target": "org.opml.facet",
+    "wasmModule": {
+      "data": "",
+      "importFn": "import_opml",
+      "exportFn": "export_opml"
+    }
+  }
+}

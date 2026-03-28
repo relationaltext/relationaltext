@@ -1,0 +1,31 @@
+{
+  "$type": "org.relationaltext.lens",
+  "id": "com.apple.news.to.relationaltext.v1",
+  "description": "Transform Apple News Format facets to RelationalText facets",
+  "source": "com.apple.news.facet",
+  "target": "org.relationaltext.facet",
+  "rules": [
+    { "match": { "name": "bold" },          "replace": { "name": "bold" } },
+    { "match": { "name": "italic" },        "replace": { "name": "italic" } },
+    { "match": { "name": "underline" },     "replace": { "name": "underline" } },
+    { "match": { "name": "strikethrough" }, "replace": { "name": "strikethrough" } },
+    { "match": { "name": "link" },          "replace": { "name": "link", "renameAttrs": { "URL": "url" } } },
+    { "match": { "name": "body" },          "replace": { "name": "paragraph" } },
+    { "match": { "name": "title" },         "replace": { "name": "heading", "addAttrs": { "level": 1 } } },
+    { "match": { "name": "intro" },         "replace": { "name": "paragraph" } },
+    { "match": { "name": "heading1" },      "replace": { "name": "heading", "addAttrs": { "level": 1 } } },
+    { "match": { "name": "heading2" },      "replace": { "name": "heading", "addAttrs": { "level": 2 } } },
+    { "match": { "name": "heading3" },      "replace": { "name": "heading", "addAttrs": { "level": 3 } } },
+    { "match": { "name": "heading4" },      "replace": { "name": "heading", "addAttrs": { "level": 4 } } },
+    { "match": { "name": "heading5" },      "replace": { "name": "heading", "addAttrs": { "level": 5 } } },
+    { "match": { "name": "heading6" },      "replace": { "name": "heading", "addAttrs": { "level": 6 } } },
+    { "match": { "name": "quote" },         "replace": { "name": "blockquote-marker" } },
+    { "match": { "name": "pullquote" },     "replace": { "name": "blockquote-marker" } },
+    { "match": { "name": "aside" },         "replace": { "name": "paragraph" } },
+    { "match": { "name": "author" },        "replace": { "name": "paragraph" } },
+    { "match": { "name": "byline" },        "replace": { "name": "paragraph" } },
+    { "match": { "name": "caption" },       "replace": { "name": "paragraph" } },
+    { "match": { "name": "chapter" },       "replace": { "name": "paragraph" } },
+    { "match": { "name": "section" },       "replace": { "name": "paragraph" } }
+  ]
+}

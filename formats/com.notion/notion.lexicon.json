@@ -1,0 +1,97 @@
+{
+  "$type": "org.relationaltext.format-lexicon",
+  "id": "com.notion.facet",
+  "version": "1.0",
+  "specUrl": "https://developers.notion.com/reference/block",
+  "wasmLens": {
+    "$type": "org.relationaltext.lens",
+    "id": "com.notion.wasm.v1",
+    "source": "raw:com.notion.facet",
+    "target": "com.notion.facet",
+    "wasmModule": {
+      "data": "",
+      "importFn": "import",
+      "exportFn": "export"
+    }
+  },
+  "features": [
+    {
+      "typeId": "com.notion.facet#bold",
+      "featureClass": "inline",
+      "expandStart": true,
+      "expandEnd": true
+    },
+    {
+      "typeId": "com.notion.facet#italic",
+      "featureClass": "inline",
+      "expandStart": true,
+      "expandEnd": true
+    },
+    {
+      "typeId": "com.notion.facet#underline",
+      "featureClass": "inline",
+      "expandStart": true,
+      "expandEnd": true
+    },
+    {
+      "typeId": "com.notion.facet#strikethrough",
+      "featureClass": "inline",
+      "expandStart": true,
+      "expandEnd": true
+    },
+    {
+      "typeId": "com.notion.facet#code",
+      "featureClass": "inline",
+      "expandStart": false,
+      "expandEnd": false
+    },
+    {
+      "typeId": "com.notion.facet#link",
+      "featureClass": "entity"
+    },
+    {
+      "typeId": "com.notion.facet#paragraph",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "com.notion.facet#heading_1",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "com.notion.facet#heading_2",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "com.notion.facet#heading_3",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "com.notion.facet#code-block",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "com.notion.facet#list-item-text",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "com.notion.facet#divider",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "com.notion.facet#blockquote-marker",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "com.notion.facet#bullet-list-marker",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "com.notion.facet#ordered-list-marker",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "com.notion.facet#list-item-marker",
+      "featureClass": "block"
+    }
+  ]
+}

@@ -1,0 +1,126 @@
+{
+  "$type": "org.relationaltext.format-lexicon",
+  "id": "org.pandoc.facet",
+  "version": "1.0",
+  "specUrl": "https://pandoc.org/MANUAL.html",
+  "implicitBlockType": "Para",
+  "features": [
+    {
+      "typeId": "org.pandoc.facet#Strong",
+      "featureClass": "inline",
+      "expandStart": true,
+      "expandEnd": true
+    },
+    {
+      "typeId": "org.pandoc.facet#Emph",
+      "featureClass": "inline",
+      "expandStart": true,
+      "expandEnd": true
+    },
+    {
+      "typeId": "org.pandoc.facet#Strikeout",
+      "featureClass": "inline",
+      "expandStart": true,
+      "expandEnd": true
+    },
+    {
+      "typeId": "org.pandoc.facet#Superscript",
+      "featureClass": "inline",
+      "expandStart": true,
+      "expandEnd": true
+    },
+    {
+      "typeId": "org.pandoc.facet#Subscript",
+      "featureClass": "inline",
+      "expandStart": true,
+      "expandEnd": true
+    },
+    {
+      "typeId": "org.pandoc.facet#Code",
+      "featureClass": "inline",
+      "expandStart": false,
+      "expandEnd": false
+    },
+    {
+      "typeId": "org.pandoc.facet#Span",
+      "featureClass": "inline",
+      "expandStart": false,
+      "expandEnd": false
+    },
+    {
+      "typeId": "org.pandoc.facet#Link",
+      "featureClass": "entity"
+    },
+    {
+      "typeId": "org.pandoc.facet#Image",
+      "featureClass": "entity"
+    },
+    {
+      "typeId": "org.pandoc.facet#Note",
+      "featureClass": "entity"
+    },
+    {
+      "typeId": "org.pandoc.facet#LineBreak",
+      "featureClass": "entity"
+    },
+    {
+      "typeId": "org.pandoc.facet#Para",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "org.pandoc.facet#Header",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "org.pandoc.facet#CodeBlock",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "org.pandoc.facet#BlockQuote",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "org.pandoc.facet#BulletList",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "org.pandoc.facet#OrderedList",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "org.pandoc.facet#list-item-marker",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "org.pandoc.facet#list-item-text",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "org.pandoc.facet#HorizontalRule",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "org.pandoc.facet#footnote-def",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "org.pandoc.facet#Div",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "org.pandoc.facet#Meta",
+      "featureClass": "block"
+    }
+  ],
+  "wasmLens": {
+    "$type": "org.relationaltext.lens",
+    "id": "org.pandoc.facet.wasm.v1",
+    "source": "raw:org.pandoc.facet",
+    "target": "org.pandoc.facet",
+    "wasmModule": {
+      "data": "",
+      "importFn": "import",
+      "exportFn": "export"
+    }
+  }
+}

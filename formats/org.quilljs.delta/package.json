@@ -1,0 +1,9 @@
+{
+  "name": "@relational-text/org.quilljs.delta",
+  "version": "0.1.0",
+  "type": "module",
+  "exports": {
+    ".": "./ts/quill.ts",
+    "./*.json": "./*.json"
+  }
+}

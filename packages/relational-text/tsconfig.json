@@ -1,0 +1,20 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "outDir": "./dist",
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+    "paths": {
+      "relational-text":                 ["./src/index.ts"],
+      "relational-text/core":            ["./src/core.ts"],
+      "relational-text/lens":            ["./src/lens.ts"],
+      "relational-text/types":           ["./src/types.ts"],
+      "relational-text/wasm":            ["./src/wasm.ts"],
+      "relational-text/format-wasm":     ["./src/format-wasm.ts"],
+      "relational-text/registry":        ["./src/registry.ts"]
+    }
+  },
+  "include": ["src/**/*.ts", "src/wasm/**/*.d.ts"],
+  "exclude": ["node_modules", "dist", "test"]
+}

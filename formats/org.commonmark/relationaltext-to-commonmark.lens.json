@@ -1,0 +1,307 @@
+{
+  "$type": "org.relationaltext.lens",
+  "id": "org.relationaltext.to.commonmark.v1",
+  "description": "Transform RelationalText canonical facets to CommonMark facets",
+  "source": "org.relationaltext.facet",
+  "target": "org.commonmark.facet",
+  "rules": [
+    {
+      "match": {
+        "name": "bold"
+      },
+      "replace": {
+        "name": "strong"
+      }
+    },
+    {
+      "match": {
+        "name": "italic"
+      },
+      "replace": {
+        "name": "emphasis"
+      }
+    },
+    {
+      "match": {
+        "name": "strikethrough"
+      },
+      "replace": {
+        "name": "strikethrough"
+      }
+    },
+    {
+      "match": {
+        "name": "underline"
+      },
+      "replace": {
+        "name": "underline"
+      }
+    },
+    {
+      "match": {
+        "name": "code"
+      },
+      "replace": {
+        "name": "code-span"
+      }
+    },
+    {
+      "match": {
+        "name": "superscript"
+      },
+      "replace": {
+        "name": "superscript"
+      }
+    },
+    {
+      "match": {
+        "name": "subscript"
+      },
+      "replace": {
+        "name": "subscript"
+      }
+    },
+    {
+      "match": {
+        "name": "link"
+      },
+      "replace": {
+        "name": "link",
+        "renameAttrs": {
+          "url": "uri"
+        }
+      }
+    },
+    {
+      "match": {
+        "name": "mention"
+      },
+      "replace": {
+        "name": "link",
+        "renameAttrs": {
+          "url": "uri"
+        }
+      }
+    },
+    {
+      "match": {
+        "name": "hashtag"
+      },
+      "replace": {
+        "name": "link",
+        "renameAttrs": {
+          "url": "uri"
+        }
+      }
+    },
+    {
+      "match": {
+        "name": "line-break"
+      },
+      "replace": {
+        "name": "line-break"
+      }
+    },
+    {
+      "match": {
+        "name": "image"
+      },
+      "replace": {
+        "name": "image"
+      }
+    },
+    {
+      "match": {
+        "name": "paragraph"
+      },
+      "replace": {
+        "name": "paragraph"
+      }
+    },
+    {
+      "match": {
+        "name": "heading"
+      },
+      "replace": {
+        "name": "heading"
+      }
+    },
+    {
+      "match": {
+        "name": "code-block"
+      },
+      "replace": {
+        "name": "code-block"
+      }
+    },
+    {
+      "match": {
+        "name": "horizontal-rule"
+      },
+      "replace": {
+        "name": "horizontal-rule"
+      }
+    },
+    {
+      "match": {
+        "name": "unordered-list-item"
+      },
+      "replace": {
+        "name": "unordered-list-item"
+      }
+    },
+    {
+      "match": {
+        "name": "ordered-list-item"
+      },
+      "replace": {
+        "name": "ordered-list-item"
+      }
+    },
+    {
+      "match": {
+        "name": "blockquote"
+      },
+      "replace": {
+        "name": "blockquote"
+      }
+    },
+    {
+      "match": {
+        "name": "definition-term"
+      },
+      "replace": {
+        "name": "definition-term"
+      }
+    },
+    {
+      "match": {
+        "name": "definition-detail"
+      },
+      "replace": {
+        "name": "definition-detail"
+      }
+    },
+    {
+      "match": {
+        "name": "blockquote-marker"
+      },
+      "replace": {
+        "name": "blockquote-marker"
+      }
+    },
+    {
+      "match": {
+        "name": "bullet-list-marker"
+      },
+      "replace": {
+        "name": "bullet-list-marker"
+      }
+    },
+    {
+      "match": {
+        "name": "ordered-list-marker"
+      },
+      "replace": {
+        "name": "ordered-list-marker"
+      }
+    },
+    {
+      "match": {
+        "name": "list-item-marker"
+      },
+      "replace": {
+        "name": "list-item-marker"
+      }
+    },
+    {
+      "match": {
+        "name": "list-item-text"
+      },
+      "replace": {
+        "name": "list-item-text"
+      }
+    },
+    {
+      "match": {
+        "name": "keyboard"
+      },
+      "replace": {
+        "name": "keyboard"
+      }
+    },
+    {
+      "match": {
+        "name": "highlight"
+      },
+      "replace": {
+        "name": "mark"
+      }
+    },
+    {
+      "match": {
+        "name": "insertion"
+      },
+      "replace": {
+        "name": "ins",
+        "renameAttrs": {
+          "author": "cite",
+          "date": "datetime"
+        }
+      }
+    },
+    {
+      "match": {
+        "name": "deletion"
+      },
+      "replace": {
+        "name": "del",
+        "renameAttrs": {
+          "author": "cite",
+          "date": "datetime"
+        }
+      }
+    },
+    {
+      "match": {
+        "name": "comment"
+      },
+      "replace": {
+        "name": "mark",
+        "keepAttrs": [
+          "id"
+        ]
+      }
+    },
+    {
+      "match": {
+        "name": "table"
+      },
+      "replace": {
+        "name": "table"
+      }
+    },
+    {
+      "match": {
+        "name": "embed"
+      },
+      "replace": null
+    },
+    {
+      "match": {
+        "name": "page-break"
+      },
+      "replace": {
+        "name": "horizontal-rule"
+      }
+    },
+    {
+      "match": {
+        "name": "details"
+      },
+      "replace": {
+        "name": "blockquote-marker"
+      }
+    }
+  ]
+}

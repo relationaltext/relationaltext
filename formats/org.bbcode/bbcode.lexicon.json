@@ -1,0 +1,98 @@
+{
+  "$type": "org.relationaltext.format-lexicon",
+  "id": "org.bbcode.facet",
+  "version": "1.0",
+  "specUrl": "https://www.bbcode.org/",
+  "implicitBlockType": "paragraph",
+  "features": [
+    {
+      "typeId": "org.bbcode.facet#b",
+      "featureClass": "inline",
+      "expandStart": true,
+      "expandEnd": true
+    },
+    {
+      "typeId": "org.bbcode.facet#i",
+      "featureClass": "inline",
+      "expandStart": true,
+      "expandEnd": true
+    },
+    {
+      "typeId": "org.bbcode.facet#u",
+      "featureClass": "inline",
+      "expandStart": true,
+      "expandEnd": true
+    },
+    {
+      "typeId": "org.bbcode.facet#s",
+      "featureClass": "inline",
+      "expandStart": true,
+      "expandEnd": true
+    },
+    {
+      "typeId": "org.bbcode.facet#code",
+      "featureClass": "inline",
+      "expandStart": false,
+      "expandEnd": false
+    },
+    {
+      "typeId": "org.bbcode.facet#color",
+      "featureClass": "inline",
+      "expandStart": false,
+      "expandEnd": false
+    },
+    {
+      "typeId": "org.bbcode.facet#size",
+      "featureClass": "inline",
+      "expandStart": false,
+      "expandEnd": false
+    },
+    {
+      "typeId": "org.bbcode.facet#url",
+      "featureClass": "entity"
+    },
+    {
+      "typeId": "org.bbcode.facet#img",
+      "featureClass": "entity"
+    },
+    {
+      "typeId": "org.bbcode.facet#paragraph",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "org.bbcode.facet#code-block",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "org.bbcode.facet#blockquote-marker",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "org.bbcode.facet#bullet-list-marker",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "org.bbcode.facet#ordered-list-marker",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "org.bbcode.facet#list-item-marker",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "org.bbcode.facet#list-item-text",
+      "featureClass": "block"
+    }
+  ],
+  "wasmLens": {
+    "$type": "org.relationaltext.lens",
+    "id": "org.bbcode.facet.wasm.v1",
+    "source": "raw:org.bbcode.facet",
+    "target": "org.bbcode.facet",
+    "wasmModule": {
+      "data": "",
+      "importFn": "import_bbcode",
+      "exportFn": "export_bbcode"
+    }
+  }
+}

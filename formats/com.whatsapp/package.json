@@ -1,0 +1,9 @@
+{
+  "name": "@relational-text/com.whatsapp",
+  "version": "0.1.0",
+  "type": "module",
+  "exports": {
+    ".": "./ts/whatsapp.ts",
+    "./*.json": "./*.json"
+  }
+}

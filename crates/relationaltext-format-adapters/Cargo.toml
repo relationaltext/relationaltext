@@ -1,0 +1,155 @@
+[package]
+name = "relationaltext-format-adapters"
+version = "0.1.0"
+edition = "2021"
+description = "WASM format adapters for RelationalText (Quill, ProseMirror, Slate)"
+license = "MIT OR Apache-2.0"
+
+[lib]
+crate-type = ["rlib"]
+
+[[example]]
+name = "quill"
+crate-type = ["cdylib"]
+
+[[example]]
+name = "prosemirror"
+crate-type = ["cdylib"]
+
+[[example]]
+name = "slate"
+crate-type = ["cdylib"]
+
+[[example]]
+name = "tiptap"
+crate-type = ["cdylib"]
+
+[[example]]
+name = "lexical"
+crate-type = ["cdylib"]
+
+[[example]]
+name = "contentful"
+crate-type = ["cdylib"]
+
+[[example]]
+name = "sanity"
+crate-type = ["cdylib"]
+
+[[example]]
+name = "notion"
+crate-type = ["cdylib"]
+
+[[example]]
+name = "bluesky"
+crate-type = ["cdylib"]
+
+[[example]]
+name = "applenews"
+crate-type = ["cdylib"]
+
+# Phase 3: Social / chat formats
+[[example]]
+name = "slack"
+crate-type = ["cdylib"]
+
+[[example]]
+name = "discord"
+crate-type = ["cdylib"]
+
+[[example]]
+name = "telegram"
+crate-type = ["cdylib"]
+
+[[example]]
+name = "whatsapp"
+crate-type = ["cdylib"]
+
+[[example]]
+name = "linkedin"
+crate-type = ["cdylib"]
+
+[[example]]
+name = "threads"
+crate-type = ["cdylib"]
+
+# Phase 4: JSON formats
+[[example]]
+name = "pandoc"
+crate-type = ["cdylib"]
+
+[[example]]
+name = "jupyter"
+crate-type = ["cdylib"]
+
+[[example]]
+name = "roam"
+crate-type = ["cdylib"]
+
+# Phase 4: Markup formats (standalone text parsers)
+[[example]]
+name = "logseq"
+crate-type = ["cdylib"]
+
+[[example]]
+name = "opml"
+crate-type = ["cdylib"]
+
+[[example]]
+name = "org"
+crate-type = ["cdylib"]
+
+[[example]]
+name = "bbcode"
+crate-type = ["cdylib"]
+
+[[example]]
+name = "fountain"
+crate-type = ["cdylib"]
+
+[[example]]
+name = "textile"
+crate-type = ["cdylib"]
+
+[[example]]
+name = "dokuwiki"
+crate-type = ["cdylib"]
+
+[[example]]
+name = "mediawiki"
+crate-type = ["cdylib"]
+
+[[example]]
+name = "confluence"
+crate-type = ["cdylib"]
+
+[[example]]
+name = "mdx"
+crate-type = ["cdylib"]
+
+[[example]]
+name = "markdoc"
+crate-type = ["cdylib"]
+
+# Phase 5: Shared markdown binary (CommonMark, GitLab, Obsidian, MyST, MultiMarkdown)
+[[example]]
+name = "markdown"
+crate-type = ["cdylib"]
+
+# Phase 6: HTML (WHATWG-compliant parser)
+[[example]]
+name = "html"
+crate-type = ["cdylib"]
+
+[dependencies]
+relationaltext-core = { path = "../relationaltext-core" }
+relationaltext-wasm-format-adapter = { path = "../wasm-format-adapter" }
+serde_json = "1"
+comrak = { version = "0.28", default-features = false }
+html5ever = "0.27"
+markup5ever_rcdom = "0.3"
+parse-wiki-text-2 = "0.2"
+
+[profile.release]
+opt-level = "s"
+lto = true

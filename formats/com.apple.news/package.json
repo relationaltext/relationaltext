@@ -1,0 +1,9 @@
+{
+  "name": "@relational-text/com.apple.news",
+  "version": "0.1.0",
+  "type": "module",
+  "exports": {
+    ".": "./ts/applenews.ts",
+    "./*.json": "./*.json"
+  }
+}

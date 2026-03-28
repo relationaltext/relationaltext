@@ -1,0 +1,68 @@
+{
+  "$type": "org.relationaltext.format-lexicon",
+  "id": "com.logseq.facet",
+  "version": "1.0",
+  "specUrl": "https://logseq.com/",
+  "implicitBlockType": "block",
+  "features": [
+    {
+      "typeId": "com.logseq.facet#bold",
+      "featureClass": "inline",
+      "expandStart": true,
+      "expandEnd": true
+    },
+    {
+      "typeId": "com.logseq.facet#italic",
+      "featureClass": "inline",
+      "expandStart": true,
+      "expandEnd": true
+    },
+    {
+      "typeId": "com.logseq.facet#strikethrough",
+      "featureClass": "inline",
+      "expandStart": true,
+      "expandEnd": true
+    },
+    {
+      "typeId": "com.logseq.facet#code",
+      "featureClass": "inline",
+      "expandStart": false,
+      "expandEnd": false
+    },
+    {
+      "typeId": "com.logseq.facet#page-ref",
+      "featureClass": "entity"
+    },
+    {
+      "typeId": "com.logseq.facet#block-ref",
+      "featureClass": "entity"
+    },
+    {
+      "typeId": "com.logseq.facet#tag",
+      "featureClass": "entity"
+    },
+    {
+      "typeId": "com.logseq.facet#link",
+      "featureClass": "entity"
+    },
+    {
+      "typeId": "com.logseq.facet#block",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "com.logseq.facet#property",
+      "featureClass": "block"
+    }
+  ],
+  "wasmLens": {
+    "$type": "org.relationaltext.lens",
+    "id": "com.logseq.facet.wasm.v1",
+    "source": "raw:com.logseq.facet",
+    "target": "com.logseq.facet",
+    "wasmModule": {
+      "data": "",
+      "importFn": "import_logseq",
+      "exportFn": "export_logseq"
+    }
+  }
+}

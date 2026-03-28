@@ -1,0 +1,112 @@
+{
+  "$type": "org.relationaltext.format-lexicon",
+  "id": "org.textile.facet",
+  "version": "1.0",
+  "specUrl": "https://textile-lang.com/",
+  "implicitBlockType": "paragraph",
+  "features": [
+    {
+      "typeId": "org.textile.facet#bold",
+      "featureClass": "inline",
+      "expandStart": true,
+      "expandEnd": true
+    },
+    {
+      "typeId": "org.textile.facet#strong",
+      "featureClass": "inline",
+      "expandStart": true,
+      "expandEnd": true
+    },
+    {
+      "typeId": "org.textile.facet#italic",
+      "featureClass": "inline",
+      "expandStart": true,
+      "expandEnd": true
+    },
+    {
+      "typeId": "org.textile.facet#underline",
+      "featureClass": "inline",
+      "expandStart": true,
+      "expandEnd": true
+    },
+    {
+      "typeId": "org.textile.facet#strikethrough",
+      "featureClass": "inline",
+      "expandStart": true,
+      "expandEnd": true
+    },
+    {
+      "typeId": "org.textile.facet#superscript",
+      "featureClass": "inline",
+      "expandStart": false,
+      "expandEnd": false
+    },
+    {
+      "typeId": "org.textile.facet#subscript",
+      "featureClass": "inline",
+      "expandStart": false,
+      "expandEnd": false
+    },
+    {
+      "typeId": "org.textile.facet#code",
+      "featureClass": "inline",
+      "expandStart": false,
+      "expandEnd": false
+    },
+    {
+      "typeId": "org.textile.facet#link",
+      "featureClass": "entity"
+    },
+    {
+      "typeId": "org.textile.facet#image",
+      "featureClass": "entity"
+    },
+    {
+      "typeId": "org.textile.facet#paragraph",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "org.textile.facet#heading",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "org.textile.facet#code-block",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "org.textile.facet#blockquote-marker",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "org.textile.facet#bullet-list-marker",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "org.textile.facet#ordered-list-marker",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "org.textile.facet#list-item-marker",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "org.textile.facet#list-item-text",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "org.textile.facet#horizontal-rule",
+      "featureClass": "block"
+    }
+  ],
+  "wasmLens": {
+    "$type": "org.relationaltext.lens",
+    "id": "org.textile.facet.wasm.v1",
+    "source": "raw:org.textile.facet",
+    "target": "org.textile.facet",
+    "wasmModule": {
+      "data": "",
+      "importFn": "import_textile",
+      "exportFn": "export_textile"
+    }
+  }
+}

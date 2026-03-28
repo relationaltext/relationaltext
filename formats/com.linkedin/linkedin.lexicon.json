@@ -1,0 +1,60 @@
+{
+  "$type": "org.relationaltext.format-lexicon",
+  "id": "com.linkedin.facet",
+  "version": "1.0",
+  "specUrl": "https://www.linkedin.com/help/linkedin/answer/a523702",
+  "implicitBlockType": "paragraph",
+  "features": [
+    {
+      "typeId": "com.linkedin.facet#bold",
+      "featureClass": "inline",
+      "expandStart": true,
+      "expandEnd": true
+    },
+    {
+      "typeId": "com.linkedin.facet#italic",
+      "featureClass": "inline",
+      "expandStart": true,
+      "expandEnd": true
+    },
+    {
+      "typeId": "com.linkedin.facet#mention",
+      "featureClass": "entity"
+    },
+    {
+      "typeId": "com.linkedin.facet#hashtag",
+      "featureClass": "entity"
+    },
+    {
+      "typeId": "com.linkedin.facet#paragraph",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "com.linkedin.facet#bullet-list-marker",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "com.linkedin.facet#ordered-list-marker",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "com.linkedin.facet#list-item-marker",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "com.linkedin.facet#list-item-text",
+      "featureClass": "block"
+    }
+  ],
+  "wasmLens": {
+    "$type": "org.relationaltext.lens",
+    "id": "linkedin.wasm.v1",
+    "source": "raw:com.linkedin.facet",
+    "target": "com.linkedin.facet",
+    "wasmModule": {
+      "data": "",
+      "importFn": "import",
+      "exportFn": "export"
+    }
+  }
+}

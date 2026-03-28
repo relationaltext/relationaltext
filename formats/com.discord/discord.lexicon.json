@@ -1,0 +1,104 @@
+{
+  "$type": "org.relationaltext.format-lexicon",
+  "id": "com.discord.facet",
+  "version": "1.0",
+  "specUrl": "https://support.discord.com/hc/en-us/articles/210298617-Markdown-Text-101-Chat-Formatting-Bold-Italic-Underline-",
+  "implicitBlockType": "paragraph",
+  "features": [
+    {
+      "typeId": "com.discord.facet#bold",
+      "featureClass": "inline",
+      "expandStart": true,
+      "expandEnd": true
+    },
+    {
+      "typeId": "com.discord.facet#italic",
+      "featureClass": "inline",
+      "expandStart": true,
+      "expandEnd": true
+    },
+    {
+      "typeId": "com.discord.facet#underline",
+      "featureClass": "inline",
+      "expandStart": true,
+      "expandEnd": true
+    },
+    {
+      "typeId": "com.discord.facet#strikethrough",
+      "featureClass": "inline",
+      "expandStart": true,
+      "expandEnd": true
+    },
+    {
+      "typeId": "com.discord.facet#spoiler",
+      "featureClass": "inline",
+      "expandStart": true,
+      "expandEnd": true
+    },
+    {
+      "typeId": "com.discord.facet#code",
+      "featureClass": "inline",
+      "expandStart": false,
+      "expandEnd": false
+    },
+    {
+      "typeId": "com.discord.facet#hard-break",
+      "featureClass": "entity"
+    },
+    {
+      "typeId": "com.discord.facet#image",
+      "featureClass": "entity"
+    },
+    {
+      "typeId": "com.discord.facet#link",
+      "featureClass": "entity"
+    },
+    {
+      "typeId": "com.discord.facet#paragraph",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "com.discord.facet#heading",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "com.discord.facet#code-block",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "com.discord.facet#blockquote-marker",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "com.discord.facet#bullet-list-marker",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "com.discord.facet#ordered-list-marker",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "com.discord.facet#list-item-marker",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "com.discord.facet#list-item-text",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "com.discord.facet#horizontal-rule",
+      "featureClass": "block"
+    }
+  ],
+  "wasmLens": {
+    "$type": "org.relationaltext.lens",
+    "id": "discord.wasm.v1",
+    "source": "raw:com.discord.facet",
+    "target": "com.discord.facet",
+    "wasmModule": {
+      "data": "",
+      "importFn": "import",
+      "exportFn": "export"
+    }
+  }
+}

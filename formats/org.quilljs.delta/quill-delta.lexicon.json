@@ -1,0 +1,129 @@
+{
+  "$type": "org.relationaltext.format-lexicon",
+  "id": "org.quilljs.delta.facet",
+  "version": "1.0",
+  "specUrl": "https://quilljs.com/docs/delta/",
+  "wasmLens": {
+    "$type": "org.relationaltext.lens",
+    "id": "org.quilljs.delta.wasm.v1",
+    "source": "raw:org.quilljs.delta.facet",
+    "target": "org.quilljs.delta.facet",
+    "wasmModule": {
+      "data": "",
+      "importFn": "import",
+      "exportFn": "export"
+    }
+  },
+  "features": [
+    {
+      "typeId": "org.quilljs.delta.facet#bold",
+      "featureClass": "inline",
+      "expandStart": true,
+      "expandEnd": true
+    },
+    {
+      "typeId": "org.quilljs.delta.facet#italic",
+      "featureClass": "inline",
+      "expandStart": true,
+      "expandEnd": true
+    },
+    {
+      "typeId": "org.quilljs.delta.facet#underline",
+      "featureClass": "inline",
+      "expandStart": true,
+      "expandEnd": true
+    },
+    {
+      "typeId": "org.quilljs.delta.facet#strike",
+      "featureClass": "inline",
+      "expandStart": true,
+      "expandEnd": true
+    },
+    {
+      "typeId": "org.quilljs.delta.facet#code",
+      "featureClass": "inline",
+      "expandStart": false,
+      "expandEnd": false
+    },
+    {
+      "typeId": "org.quilljs.delta.facet#color",
+      "featureClass": "inline",
+      "expandStart": true,
+      "expandEnd": true
+    },
+    {
+      "typeId": "org.quilljs.delta.facet#background",
+      "featureClass": "inline",
+      "expandStart": true,
+      "expandEnd": true
+    },
+    {
+      "typeId": "org.quilljs.delta.facet#font",
+      "featureClass": "inline",
+      "expandStart": true,
+      "expandEnd": true
+    },
+    {
+      "typeId": "org.quilljs.delta.facet#size",
+      "featureClass": "inline",
+      "expandStart": true,
+      "expandEnd": true
+    },
+    {
+      "typeId": "org.quilljs.delta.facet#superscript",
+      "featureClass": "inline",
+      "expandStart": false,
+      "expandEnd": false
+    },
+    {
+      "typeId": "org.quilljs.delta.facet#subscript",
+      "featureClass": "inline",
+      "expandStart": false,
+      "expandEnd": false
+    },
+    {
+      "typeId": "org.quilljs.delta.facet#link",
+      "featureClass": "entity"
+    },
+    {
+      "typeId": "org.quilljs.delta.facet#image",
+      "featureClass": "entity"
+    },
+    {
+      "typeId": "org.quilljs.delta.facet#video",
+      "featureClass": "entity"
+    },
+    {
+      "typeId": "org.quilljs.delta.facet#formula",
+      "featureClass": "entity"
+    },
+    {
+      "typeId": "org.quilljs.delta.facet#paragraph",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "org.quilljs.delta.facet#header",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "org.quilljs.delta.facet#code-block",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "org.quilljs.delta.facet#list-item-text",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "org.quilljs.delta.facet#bullet-list-marker",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "org.quilljs.delta.facet#ordered-list-marker",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "org.quilljs.delta.facet#list-item-marker",
+      "featureClass": "block"
+    }
+  ]
+}

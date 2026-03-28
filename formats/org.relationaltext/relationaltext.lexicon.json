@@ -1,0 +1,252 @@
+{
+  "$type": "org.relationaltext.format-lexicon",
+  "id": "org.relationaltext",
+  "features": [
+    {
+      "typeId": "org.relationaltext.facet#bold",
+      "featureClass": "inline",
+      "expandStart": true,
+      "expandEnd": true
+    },
+    {
+      "typeId": "org.relationaltext.facet#italic",
+      "featureClass": "inline",
+      "expandStart": true,
+      "expandEnd": true
+    },
+    {
+      "typeId": "org.relationaltext.facet#strikethrough",
+      "featureClass": "inline",
+      "expandStart": true,
+      "expandEnd": true
+    },
+    {
+      "typeId": "org.relationaltext.facet#underline",
+      "featureClass": "inline",
+      "expandStart": true,
+      "expandEnd": true
+    },
+    {
+      "typeId": "org.relationaltext.facet#code",
+      "featureClass": "inline",
+      "expandStart": false,
+      "expandEnd": false
+    },
+    {
+      "typeId": "org.relationaltext.facet#keyboard",
+      "featureClass": "inline",
+      "expandStart": false,
+      "expandEnd": false
+    },
+    {
+      "typeId": "org.relationaltext.facet#superscript",
+      "featureClass": "inline",
+      "expandStart": false,
+      "expandEnd": false
+    },
+    {
+      "typeId": "org.relationaltext.facet#subscript",
+      "featureClass": "inline",
+      "expandStart": false,
+      "expandEnd": false
+    },
+    {
+      "typeId": "org.relationaltext.facet#highlight",
+      "featureClass": "inline",
+      "expandStart": true,
+      "expandEnd": true
+    },
+    {
+      "typeId": "org.relationaltext.facet#insertion",
+      "featureClass": "inline",
+      "expandStart": true,
+      "expandEnd": true
+    },
+    {
+      "typeId": "org.relationaltext.facet#deletion",
+      "featureClass": "inline",
+      "expandStart": false,
+      "expandEnd": false
+    },
+    {
+      "typeId": "org.relationaltext.facet#comment",
+      "featureClass": "inline",
+      "expandStart": false,
+      "expandEnd": false
+    },
+    {
+      "typeId": "org.relationaltext.facet#link",
+      "featureClass": "entity"
+    },
+    {
+      "typeId": "org.relationaltext.facet#mention",
+      "featureClass": "entity"
+    },
+    {
+      "typeId": "org.relationaltext.facet#hashtag",
+      "featureClass": "entity"
+    },
+    {
+      "typeId": "org.relationaltext.facet#line-break",
+      "featureClass": "entity"
+    },
+    {
+      "typeId": "org.relationaltext.facet#image",
+      "featureClass": "entity"
+    },
+    {
+      "typeId": "org.relationaltext.facet#paragraph",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "org.relationaltext.facet#heading",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "org.relationaltext.facet#code-block",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "org.relationaltext.facet#horizontal-rule",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "org.relationaltext.facet#blockquote-marker",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "org.relationaltext.facet#bullet-list-marker",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "org.relationaltext.facet#ordered-list-marker",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "org.relationaltext.facet#list-item-marker",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "org.relationaltext.facet#list-item-text",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "org.relationaltext.facet#table",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "org.relationaltext.facet#embed",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "org.relationaltext.facet#page-break",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "org.relationaltext.facet#details",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "org.relationaltext.richtext.mark#bold",
+      "featureClass": "inline",
+      "expandStart": true,
+      "expandEnd": true
+    },
+    {
+      "typeId": "org.relationaltext.richtext.mark#italic",
+      "featureClass": "inline",
+      "expandStart": true,
+      "expandEnd": true
+    },
+    {
+      "typeId": "org.relationaltext.richtext.mark#strikethrough",
+      "featureClass": "inline",
+      "expandStart": true,
+      "expandEnd": true
+    },
+    {
+      "typeId": "org.relationaltext.richtext.mark#underline",
+      "featureClass": "inline",
+      "expandStart": true,
+      "expandEnd": true
+    },
+    {
+      "typeId": "org.relationaltext.richtext.mark#code",
+      "featureClass": "inline",
+      "expandStart": false,
+      "expandEnd": false
+    },
+    {
+      "typeId": "org.relationaltext.richtext.mark#keyboard",
+      "featureClass": "inline",
+      "expandStart": false,
+      "expandEnd": false
+    },
+    {
+      "typeId": "org.relationaltext.richtext.mark#superscript",
+      "featureClass": "inline",
+      "expandStart": false,
+      "expandEnd": false
+    },
+    {
+      "typeId": "org.relationaltext.richtext.mark#subscript",
+      "featureClass": "inline",
+      "expandStart": false,
+      "expandEnd": false
+    },
+    {
+      "typeId": "org.relationaltext.richtext.block#paragraph",
+      "featureClass": "block",
+      "expandStart": false,
+      "expandEnd": false
+    },
+    {
+      "typeId": "org.relationaltext.richtext.block#heading",
+      "featureClass": "block",
+      "expandStart": false,
+      "expandEnd": false
+    },
+    {
+      "typeId": "org.relationaltext.richtext.block#unordered-list-item",
+      "featureClass": "block",
+      "expandStart": false,
+      "expandEnd": false
+    },
+    {
+      "typeId": "org.relationaltext.richtext.block#ordered-list-item",
+      "featureClass": "block",
+      "expandStart": false,
+      "expandEnd": false
+    },
+    {
+      "typeId": "org.relationaltext.richtext.block#blockquote",
+      "featureClass": "block",
+      "expandStart": false,
+      "expandEnd": false
+    },
+    {
+      "typeId": "org.relationaltext.richtext.block#code-block",
+      "featureClass": "block",
+      "expandStart": false,
+      "expandEnd": false
+    },
+    {
+      "typeId": "org.relationaltext.richtext.block#horizontal-rule",
+      "featureClass": "block",
+      "expandStart": false,
+      "expandEnd": false
+    },
+    {
+      "typeId": "org.relationaltext.richtext.block#image",
+      "featureClass": "block",
+      "expandStart": false,
+      "expandEnd": false
+    },
+    {
+      "typeId": "org.relationaltext.richtext.block#table",
+      "featureClass": "block",
+      "expandStart": false,
+      "expandEnd": false
+    }
+  ]
+}

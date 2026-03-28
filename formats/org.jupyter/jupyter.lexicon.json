@@ -1,0 +1,28 @@
+{
+  "$type": "org.relationaltext.format-lexicon",
+  "id": "org.jupyter.facet",
+  "version": "1.0",
+  "specUrl": "https://nbformat.readthedocs.io/en/latest/format_description.html",
+  "implicitBlockType": "markdown",
+  "features": [
+    {
+      "typeId": "org.jupyter.facet#markdown",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "org.jupyter.facet#code",
+      "featureClass": "block"
+    }
+  ],
+  "wasmLens": {
+    "$type": "org.relationaltext.lens",
+    "id": "org.jupyter.facet.wasm.v1",
+    "source": "raw:org.jupyter.facet",
+    "target": "org.jupyter.facet",
+    "wasmModule": {
+      "data": "",
+      "importFn": "import",
+      "exportFn": "export"
+    }
+  }
+}

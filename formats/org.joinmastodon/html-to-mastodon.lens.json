@@ -1,0 +1,27 @@
+{
+  "$type": "org.relationaltext.lens",
+  "id": "org.joinmastodon.html-to-mastodon.v1",
+  "description": "Map WHATWG HTML facets to Mastodon ActivityPub HTML semantic facets",
+  "source": "org.w3c.html.facet",
+  "target": "org.joinmastodon.facet",
+  "passthrough": "drop",
+  "invertible": false,
+  "rules": [
+    { "match": { "name": "strong" }, "replace": { "name": "strong" } },
+    { "match": { "name": "em" },     "replace": { "name": "em" } },
+    { "match": { "name": "code" },   "replace": { "name": "code" } },
+    {
+      "match": { "name": "a", "matchAttrsAll": { "class": ["u-url", "mention"] } },
+      "replace": { "name": "mention", "keepAttrs": ["href"] }
+    },
+    {
+      "match": { "name": "a", "matchAttrsAny": { "class": ["hashtag"] } },
+      "replace": { "name": "hashtag", "keepAttrs": ["href"] }
+    },
+    { "match": { "name": "a" },          "replace": { "name": "a", "keepAttrs": ["href"] } },
+    { "match": { "name": "br" },         "replace": { "name": "br" } },
+    { "match": { "name": "p" },          "replace": { "name": "p" } },
+    { "match": { "name": "pre" },        "replace": { "name": "pre" } },
+    { "match": { "name": "blockquote" }, "replace": { "name": "blockquote-marker" } }
+  ]
+}

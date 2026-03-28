@@ -1,0 +1,26 @@
+{
+  "$type": "org.relationaltext.lens",
+  "id": "org.jupyter.to.relationaltext.v1",
+  "description": "Transform Jupyter notebook facets to RelationalText facets",
+  "source": "org.jupyter.facet",
+  "target": "org.relationaltext.facet",
+  "invertible": false,
+  "rules": [
+    {
+      "match": {
+        "name": "markdown"
+      },
+      "replace": {
+        "name": "paragraph"
+      }
+    },
+    {
+      "match": {
+        "name": "code"
+      },
+      "replace": {
+        "name": "code-block"
+      }
+    }
+  ]
+}

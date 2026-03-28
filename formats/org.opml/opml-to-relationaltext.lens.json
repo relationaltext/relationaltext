@@ -1,0 +1,34 @@
+{
+  "$type": "org.relationaltext.lens",
+  "id": "org.opml.to.relationaltext.v1",
+  "description": "Transform OPML outline facets to RelationalText facets",
+  "source": "org.opml.facet",
+  "target": "org.relationaltext.facet",
+  "passthrough": "keep",
+  "rules": [
+    {
+      "match": {
+        "name": "outline"
+      },
+      "replace": {
+        "name": "paragraph"
+      }
+    },
+    {
+      "match": {
+        "name": "feed"
+      },
+      "replace": {
+        "name": "paragraph"
+      }
+    },
+    {
+      "match": {
+        "name": "heading"
+      },
+      "replace": {
+        "name": "heading"
+      }
+    }
+  ]
+}

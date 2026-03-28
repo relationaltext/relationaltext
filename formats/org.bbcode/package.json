@@ -1,0 +1,9 @@
+{
+  "name": "@relational-text/org.bbcode",
+  "version": "0.1.0",
+  "type": "module",
+  "exports": {
+    ".": "./ts/bbcode.ts",
+    "./*.json": "./*.json"
+  }
+}

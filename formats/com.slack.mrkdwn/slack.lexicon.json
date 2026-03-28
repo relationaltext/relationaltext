@@ -1,0 +1,71 @@
+{
+  "$type": "org.relationaltext.format-lexicon",
+  "id": "com.slack.mrkdwn.facet",
+  "version": "1.0",
+  "specUrl": "https://api.slack.com/reference/surfaces/formatting",
+  "features": [
+    {
+      "typeId": "com.slack.mrkdwn.facet#bold",
+      "featureClass": "inline",
+      "expandStart": true,
+      "expandEnd": true
+    },
+    {
+      "typeId": "com.slack.mrkdwn.facet#italic",
+      "featureClass": "inline",
+      "expandStart": true,
+      "expandEnd": true
+    },
+    {
+      "typeId": "com.slack.mrkdwn.facet#strikethrough",
+      "featureClass": "inline",
+      "expandStart": true,
+      "expandEnd": true
+    },
+    {
+      "typeId": "com.slack.mrkdwn.facet#code",
+      "featureClass": "inline",
+      "expandStart": false,
+      "expandEnd": false
+    },
+    {
+      "typeId": "com.slack.mrkdwn.facet#link",
+      "featureClass": "entity"
+    },
+    {
+      "typeId": "com.slack.mrkdwn.facet#paragraph",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "com.slack.mrkdwn.facet#code-block",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "com.slack.mrkdwn.facet#list-item-text",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "com.slack.mrkdwn.facet#blockquote-marker",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "com.slack.mrkdwn.facet#bullet-list-marker",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "com.slack.mrkdwn.facet#list-item-marker",
+      "featureClass": "block"
+    }
+  ],
+  "wasmLens": {
+    "$type": "org.relationaltext.lens",
+    "id": "slack.wasm.v1",
+    "source": "raw:com.slack.mrkdwn.facet",
+    "target": "com.slack.mrkdwn.facet",
+    "wasmModule": {
+      "data": "",
+      "importFn": "import",
+      "exportFn": "export"
+    }
+  }
+}

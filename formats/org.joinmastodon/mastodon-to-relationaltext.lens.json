@@ -1,0 +1,21 @@
+{
+  "$type": "org.relationaltext.lens",
+  "id": "org.joinmastodon.to.relationaltext.v1",
+  "description": "Transform Mastodon ActivityPub HTML facets to RelationalText facets",
+  "source": "org.joinmastodon.facet",
+  "target": "org.relationaltext.facet",
+  "passthrough": "keep",
+  "invertible": false,
+  "rules": [
+    { "match": { "name": "strong" },           "replace": { "name": "bold" } },
+    { "match": { "name": "em" },               "replace": { "name": "italic" } },
+    { "match": { "name": "code" },             "replace": { "name": "code" } },
+    { "match": { "name": "a" },                "replace": { "name": "link", "renameAttrs": { "href": "url" } } },
+    { "match": { "name": "mention" },          "replace": { "name": "mention", "renameAttrs": { "href": "url" } } },
+    { "match": { "name": "hashtag" },          "replace": { "name": "hashtag", "renameAttrs": { "href": "url" } } },
+    { "match": { "name": "br" },               "replace": { "name": "line-break" } },
+    { "match": { "name": "p" },                "replace": { "name": "paragraph" } },
+    { "match": { "name": "pre" },              "replace": { "name": "code-block" } },
+    { "match": { "name": "blockquote-marker" },"replace": { "name": "blockquote-marker" } }
+  ]
+}

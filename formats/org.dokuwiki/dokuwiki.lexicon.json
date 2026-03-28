@@ -1,0 +1,102 @@
+{
+  "$type": "org.relationaltext.format-lexicon",
+  "id": "org.dokuwiki.facet",
+  "version": "1.0",
+  "specUrl": "https://www.dokuwiki.org/wiki:syntax",
+  "implicitBlockType": "paragraph",
+  "features": [
+    {
+      "typeId": "org.dokuwiki.facet#bold",
+      "featureClass": "inline",
+      "expandStart": true,
+      "expandEnd": true
+    },
+    {
+      "typeId": "org.dokuwiki.facet#italic",
+      "featureClass": "inline",
+      "expandStart": true,
+      "expandEnd": true
+    },
+    {
+      "typeId": "org.dokuwiki.facet#underline",
+      "featureClass": "inline",
+      "expandStart": true,
+      "expandEnd": true
+    },
+    {
+      "typeId": "org.dokuwiki.facet#strikethrough",
+      "featureClass": "inline",
+      "expandStart": true,
+      "expandEnd": true
+    },
+    {
+      "typeId": "org.dokuwiki.facet#monospace",
+      "featureClass": "inline",
+      "expandStart": false,
+      "expandEnd": false
+    },
+    {
+      "typeId": "org.dokuwiki.facet#wikilink",
+      "featureClass": "entity"
+    },
+    {
+      "typeId": "org.dokuwiki.facet#extlink",
+      "featureClass": "entity"
+    },
+    {
+      "typeId": "org.dokuwiki.facet#image",
+      "featureClass": "entity"
+    },
+    {
+      "typeId": "org.dokuwiki.facet#line-break",
+      "featureClass": "entity"
+    },
+    {
+      "typeId": "org.dokuwiki.facet#paragraph",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "org.dokuwiki.facet#heading",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "org.dokuwiki.facet#code-block",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "org.dokuwiki.facet#blockquote-marker",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "org.dokuwiki.facet#bullet-list-marker",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "org.dokuwiki.facet#ordered-list-marker",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "org.dokuwiki.facet#list-item-marker",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "org.dokuwiki.facet#list-item-text",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "org.dokuwiki.facet#horizontal-rule",
+      "featureClass": "block"
+    }
+  ],
+  "wasmLens": {
+    "$type": "org.relationaltext.lens",
+    "id": "org.dokuwiki.facet.wasm.v1",
+    "source": "raw:org.dokuwiki.facet",
+    "target": "org.dokuwiki.facet",
+    "wasmModule": {
+      "data": "",
+      "importFn": "import_dokuwiki",
+      "exportFn": "export_dokuwiki"
+    }
+  }
+}

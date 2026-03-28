@@ -1,0 +1,9 @@
+{
+  "name": "@relational-text/org.textile",
+  "version": "0.1.0",
+  "type": "module",
+  "exports": {
+    ".": "./ts/textile.ts",
+    "./*.json": "./*.json"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "name": "@relational-text/md.obsidian",
+  "version": "0.1.0",
+  "type": "module",
+  "exports": {
+    ".": "./ts/obsidian.ts",
+    "./*.json": "./*.json"
+  }
+}

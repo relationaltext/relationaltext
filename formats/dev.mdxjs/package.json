@@ -1,0 +1,9 @@
+{
+  "name": "@relational-text/dev.mdxjs",
+  "version": "0.1.0",
+  "type": "module",
+  "exports": {
+    ".": "./ts/mdx.ts",
+    "./*.json": "./*.json"
+  }
+}

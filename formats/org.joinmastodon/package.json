@@ -1,0 +1,9 @@
+{
+  "name": "@relational-text/org.joinmastodon",
+  "version": "0.1.0",
+  "type": "module",
+  "exports": {
+    ".": "./ts/mastodon.ts",
+    "./*.json": "./*.json"
+  }
+}

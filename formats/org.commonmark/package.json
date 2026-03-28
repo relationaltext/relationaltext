@@ -1,0 +1,9 @@
+{
+  "name": "@relational-text/org.commonmark",
+  "version": "0.1.0",
+  "type": "module",
+  "exports": {
+    ".": "./ts/markdown.ts",
+    "./*.json": "./*.json"
+  }
+}

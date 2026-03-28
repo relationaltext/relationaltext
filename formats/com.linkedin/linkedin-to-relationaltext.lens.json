@@ -1,0 +1,102 @@
+{
+  "$type": "org.relationaltext.lens",
+  "id": "com.linkedin.to.relationaltext.v1",
+  "description": "Transform LinkedIn facets to RelationalText facets",
+  "source": "com.linkedin.facet",
+  "target": "org.relationaltext.facet",
+  "passthrough": "keep",
+  "invertible": false,
+  "rules": [
+    {
+      "match": {
+        "name": "bold"
+      },
+      "replace": {
+        "name": "bold"
+      }
+    },
+    {
+      "match": {
+        "name": "italic"
+      },
+      "replace": {
+        "name": "italic"
+      }
+    },
+    {
+      "match": {
+        "name": "mention"
+      },
+      "replace": {
+        "name": "mention",
+        "renameAttrs": {
+          "personName": "handle"
+        }
+      }
+    },
+    {
+      "match": {
+        "name": "hashtag"
+      },
+      "replace": {
+        "name": "hashtag"
+      }
+    },
+    {
+      "match": {
+        "name": "paragraph"
+      },
+      "replace": {
+        "name": "paragraph"
+      }
+    },
+    {
+      "match": {
+        "name": "bullet-list-marker"
+      },
+      "replace": {
+        "name": "bullet-list-marker"
+      }
+    },
+    {
+      "match": {
+        "name": "ordered-list-marker"
+      },
+      "replace": {
+        "name": "ordered-list-marker"
+      }
+    },
+    {
+      "match": {
+        "name": "list-item-marker"
+      },
+      "replace": {
+        "name": "list-item-marker"
+      }
+    },
+    {
+      "match": {
+        "name": "list-item-text"
+      },
+      "replace": {
+        "name": "list-item-text"
+      }
+    },
+    {
+      "match": {
+        "name": "unordered-list-item"
+      },
+      "replace": {
+        "name": "unordered-list-item"
+      }
+    },
+    {
+      "match": {
+        "name": "ordered-list-item"
+      },
+      "replace": {
+        "name": "ordered-list-item"
+      }
+    }
+  ]
+}

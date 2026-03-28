@@ -1,0 +1,28 @@
+{
+  "$type": "org.relationaltext.format-lexicon",
+  "id": "org.gfm.facet",
+  "specUrl": "https://github.github.com/gfm/",
+  "features": [
+    {
+      "typeId": "org.gfm.facet#strikethrough",
+      "featureClass": "inline",
+      "expandStart": true,
+      "expandEnd": true
+    },
+    {
+      "typeId": "org.gfm.facet#table",
+      "featureClass": "block"
+    }
+  ],
+  "wasmLens": {
+    "$type": "org.relationaltext.lens",
+    "id": "org.gfm.facet.wasm.v1",
+    "source": "raw:org.gfm.facet",
+    "target": "org.gfm.facet",
+    "wasmModule": {
+      "data": "",
+      "importFn": "import_commonmark",
+      "exportFn": "export_commonmark"
+    }
+  }
+}

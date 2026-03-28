@@ -1,0 +1,121 @@
+{
+  "$type": "org.relationaltext.format-lexicon",
+  "id": "io.sanity.portabletext.facet",
+  "version": "1.0",
+  "specUrl": "https://www.sanity.io/docs/presenting-block-text",
+  "wasmLens": {
+    "$type": "org.relationaltext.lens",
+    "id": "io.sanity.portabletext.wasm.v1",
+    "source": "raw:io.sanity.portabletext.facet",
+    "target": "io.sanity.portabletext.facet",
+    "wasmModule": {
+      "data": "",
+      "importFn": "import",
+      "exportFn": "export"
+    }
+  },
+  "features": [
+    {
+      "typeId": "io.sanity.portabletext.facet#strong",
+      "featureClass": "inline",
+      "expandStart": true,
+      "expandEnd": true
+    },
+    {
+      "typeId": "io.sanity.portabletext.facet#em",
+      "featureClass": "inline",
+      "expandStart": true,
+      "expandEnd": true
+    },
+    {
+      "typeId": "io.sanity.portabletext.facet#underline",
+      "featureClass": "inline",
+      "expandStart": true,
+      "expandEnd": true
+    },
+    {
+      "typeId": "io.sanity.portabletext.facet#strike-through",
+      "featureClass": "inline",
+      "expandStart": true,
+      "expandEnd": true
+    },
+    {
+      "typeId": "io.sanity.portabletext.facet#code",
+      "featureClass": "inline",
+      "expandStart": false,
+      "expandEnd": false
+    },
+    {
+      "typeId": "io.sanity.portabletext.facet#sup",
+      "featureClass": "inline",
+      "expandStart": false,
+      "expandEnd": false
+    },
+    {
+      "typeId": "io.sanity.portabletext.facet#sub",
+      "featureClass": "inline",
+      "expandStart": false,
+      "expandEnd": false
+    },
+    {
+      "typeId": "io.sanity.portabletext.facet#link",
+      "featureClass": "entity"
+    },
+    {
+      "typeId": "io.sanity.portabletext.facet#normal",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "io.sanity.portabletext.facet#h1",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "io.sanity.portabletext.facet#h2",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "io.sanity.portabletext.facet#h3",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "io.sanity.portabletext.facet#h4",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "io.sanity.portabletext.facet#h5",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "io.sanity.portabletext.facet#h6",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "io.sanity.portabletext.facet#code-block",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "io.sanity.portabletext.facet#list-item-text",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "io.sanity.portabletext.facet#horizontal-rule",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "io.sanity.portabletext.facet#blockquote-marker",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "io.sanity.portabletext.facet#bullet-list-marker",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "io.sanity.portabletext.facet#ordered-list-marker",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "io.sanity.portabletext.facet#list-item-marker",
+      "featureClass": "block"
+    }
+  ]
+}

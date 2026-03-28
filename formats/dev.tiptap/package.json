@@ -1,0 +1,9 @@
+{
+  "name": "@relational-text/dev.tiptap",
+  "version": "0.1.0",
+  "type": "module",
+  "exports": {
+    ".": "./ts/tiptap.ts",
+    "./*.json": "./*.json"
+  }
+}

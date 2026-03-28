@@ -1,0 +1,76 @@
+{
+  "$type": "org.relationaltext.format-lexicon",
+  "id": "com.whatsapp.facet",
+  "version": "1.0",
+  "specUrl": "https://faq.whatsapp.com/539178204879377",
+  "implicitBlockType": "paragraph",
+  "features": [
+    {
+      "typeId": "com.whatsapp.facet#bold",
+      "featureClass": "inline",
+      "expandStart": true,
+      "expandEnd": true
+    },
+    {
+      "typeId": "com.whatsapp.facet#italic",
+      "featureClass": "inline",
+      "expandStart": true,
+      "expandEnd": true
+    },
+    {
+      "typeId": "com.whatsapp.facet#strikethrough",
+      "featureClass": "inline",
+      "expandStart": true,
+      "expandEnd": true
+    },
+    {
+      "typeId": "com.whatsapp.facet#code",
+      "featureClass": "inline",
+      "expandStart": false,
+      "expandEnd": false
+    },
+    {
+      "typeId": "com.whatsapp.facet#paragraph",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "com.whatsapp.facet#code-block",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "com.whatsapp.facet#blockquote-marker",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "com.whatsapp.facet#bullet-list-marker",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "com.whatsapp.facet#ordered-list-marker",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "com.whatsapp.facet#list-item-marker",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "com.whatsapp.facet#list-item-text",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "com.whatsapp.facet#horizontal-rule",
+      "featureClass": "block"
+    }
+  ],
+  "wasmLens": {
+    "$type": "org.relationaltext.lens",
+    "id": "whatsapp.wasm.v1",
+    "source": "raw:com.whatsapp.facet",
+    "target": "com.whatsapp.facet",
+    "wasmModule": {
+      "data": "",
+      "importFn": "import",
+      "exportFn": "export"
+    }
+  }
+}

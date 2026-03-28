@@ -1,0 +1,9 @@
+{
+  "name": "@relational-text/app.bsky.richtext",
+  "version": "0.1.0",
+  "type": "module",
+  "exports": {
+    ".": "./ts/bluesky.ts",
+    "./*.json": "./*.json"
+  }
+}

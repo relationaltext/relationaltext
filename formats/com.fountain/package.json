@@ -1,0 +1,9 @@
+{
+  "name": "@relational-text/com.fountain",
+  "version": "0.1.0",
+  "type": "module",
+  "exports": {
+    ".": "./ts/fountain.ts",
+    "./*.json": "./*.json"
+  }
+}

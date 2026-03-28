@@ -1,0 +1,116 @@
+{
+  "$type": "org.relationaltext.format-lexicon",
+  "id": "com.apple.news.facet",
+  "version": "1.9",
+  "specUrl": "https://developer.apple.com/documentation/applenews/apple-news-format-tutorials",
+  "implicitBlockType": "body",
+  "wasmLens": {
+    "$type": "org.relationaltext.lens",
+    "id": "com.apple.news.wasm.v1",
+    "source": "raw:com.apple.news.facet",
+    "target": "com.apple.news.facet",
+    "wasmModule": {
+      "data": "",
+      "importFn": "import",
+      "exportFn": "export"
+    }
+  },
+  "features": [
+    {
+      "typeId": "com.apple.news.facet#bold",
+      "featureClass": "inline",
+      "expandStart": true,
+      "expandEnd": true
+    },
+    {
+      "typeId": "com.apple.news.facet#italic",
+      "featureClass": "inline",
+      "expandStart": true,
+      "expandEnd": true
+    },
+    {
+      "typeId": "com.apple.news.facet#underline",
+      "featureClass": "inline",
+      "expandStart": false,
+      "expandEnd": false
+    },
+    {
+      "typeId": "com.apple.news.facet#strikethrough",
+      "featureClass": "inline",
+      "expandStart": true,
+      "expandEnd": true
+    },
+    {
+      "typeId": "com.apple.news.facet#link",
+      "featureClass": "entity"
+    },
+    {
+      "typeId": "com.apple.news.facet#body",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "com.apple.news.facet#title",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "com.apple.news.facet#intro",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "com.apple.news.facet#heading1",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "com.apple.news.facet#heading2",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "com.apple.news.facet#heading3",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "com.apple.news.facet#heading4",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "com.apple.news.facet#heading5",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "com.apple.news.facet#heading6",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "com.apple.news.facet#quote",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "com.apple.news.facet#pullquote",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "com.apple.news.facet#aside",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "com.apple.news.facet#author",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "com.apple.news.facet#byline",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "com.apple.news.facet#caption",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "com.apple.news.facet#chapter",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "com.apple.news.facet#section",
+      "featureClass": "block"
+    }
+  ]
+}

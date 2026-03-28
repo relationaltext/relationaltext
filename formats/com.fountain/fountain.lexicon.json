@@ -1,0 +1,88 @@
+{
+  "$type": "org.relationaltext.format-lexicon",
+  "id": "com.fountain.facet",
+  "version": "1.0",
+  "specUrl": "https://fountain.io/syntax",
+  "implicitBlockType": "action",
+  "features": [
+    {
+      "typeId": "com.fountain.facet#bold",
+      "featureClass": "inline",
+      "expandStart": true,
+      "expandEnd": true
+    },
+    {
+      "typeId": "com.fountain.facet#italic",
+      "featureClass": "inline",
+      "expandStart": true,
+      "expandEnd": true
+    },
+    {
+      "typeId": "com.fountain.facet#underline",
+      "featureClass": "inline",
+      "expandStart": true,
+      "expandEnd": true
+    },
+    {
+      "typeId": "com.fountain.facet#note",
+      "featureClass": "inline",
+      "expandStart": false,
+      "expandEnd": false
+    },
+    {
+      "typeId": "com.fountain.facet#action",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "com.fountain.facet#scene-heading",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "com.fountain.facet#character",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "com.fountain.facet#parenthetical",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "com.fountain.facet#dialogue",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "com.fountain.facet#transition",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "com.fountain.facet#lyric",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "com.fountain.facet#page-break",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "com.fountain.facet#section",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "com.fountain.facet#synopsis",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "com.fountain.facet#title-page",
+      "featureClass": "block"
+    }
+  ],
+  "wasmLens": {
+    "$type": "org.relationaltext.lens",
+    "id": "com.fountain.facet.wasm.v1",
+    "source": "raw:com.fountain.facet",
+    "target": "com.fountain.facet",
+    "wasmModule": {
+      "data": "",
+      "importFn": "import_fountain",
+      "exportFn": "export_fountain"
+    }
+  }
+}

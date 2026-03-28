@@ -1,0 +1,33 @@
+[workspace]
+members = [
+    "crates/relationaltext-core",
+    "crates/relationaltext-wasm",
+    "crates/relationaltext-sqlite",
+    "crates/wasm-format-adapter",
+    "crates/relationaltext-format-adapters",
+]
+resolver = "2"
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+license = "Apache-2.0"
+authors = ["Blaine Cook <me@bcook.ca>"]
+repository = "https://github.com/relationaltext/relationaltext"
+
+[workspace.dependencies]
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+thiserror = "1"
+panproto-gat = "0.12.0"
+panproto-schema = "0.12.0"
+panproto-inst = "0.12.0"
+panproto-lens = "0.12.0"
+panproto-protocols = "0.12.0"
+panproto-expr = "0.12.0"
+panproto-mig = "0.12.0"
+panproto-vcs = "0.12.0"
+smallvec = { version = "2.0.0-alpha.12", features = ["serde"] }
+
+[patch.crates-io]
+parse-wiki-text-2 = { path = "crates/parse-wiki-text-2" }

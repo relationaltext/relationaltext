@@ -1,0 +1,216 @@
+{
+  "$type": "org.relationaltext.lens",
+  "id": "org.mediawiki.to.relationaltext.v1",
+  "description": "Transform MediaWiki markup facets to RelationalText facets",
+  "source": "org.mediawiki.facet",
+  "target": "org.relationaltext.facet",
+  "invertible": false,
+  "rules": [
+    {
+      "match": {
+        "name": "bold"
+      },
+      "replace": {
+        "name": "bold"
+      }
+    },
+    {
+      "match": {
+        "name": "italic"
+      },
+      "replace": {
+        "name": "italic"
+      }
+    },
+    {
+      "match": {
+        "name": "code"
+      },
+      "replace": {
+        "name": "code"
+      }
+    },
+    {
+      "match": {
+        "name": "wikilink"
+      },
+      "replace": {
+        "name": "link",
+        "renameAttrs": {
+          "page": "url"
+        }
+      }
+    },
+    {
+      "match": {
+        "name": "extlink"
+      },
+      "replace": {
+        "name": "link",
+        "renameAttrs": {
+          "uri": "url"
+        }
+      }
+    },
+    {
+      "match": {
+        "name": "image"
+      },
+      "replace": {
+        "name": "image"
+      }
+    },
+    {
+      "match": {
+        "name": "line-break"
+      },
+      "replace": {
+        "name": "line-break"
+      }
+    },
+    {
+      "match": {
+        "name": "paragraph"
+      },
+      "replace": {
+        "name": "paragraph"
+      }
+    },
+    {
+      "match": {
+        "name": "heading"
+      },
+      "replace": {
+        "name": "heading"
+      }
+    },
+    {
+      "match": {
+        "name": "blockquote-marker"
+      },
+      "replace": {
+        "name": "blockquote-marker"
+      }
+    },
+    {
+      "match": {
+        "name": "bullet-list-marker"
+      },
+      "replace": {
+        "name": "bullet-list-marker"
+      }
+    },
+    {
+      "match": {
+        "name": "ordered-list-marker"
+      },
+      "replace": {
+        "name": "ordered-list-marker"
+      }
+    },
+    {
+      "match": {
+        "name": "list-item-marker"
+      },
+      "replace": {
+        "name": "list-item-marker"
+      }
+    },
+    {
+      "match": {
+        "name": "list-item-text"
+      },
+      "replace": {
+        "name": "list-item-text"
+      }
+    },
+    {
+      "match": {
+        "name": "horizontal-rule"
+      },
+      "replace": {
+        "name": "horizontal-rule"
+      }
+    },
+    {
+      "match": {
+        "name": "definition-term"
+      },
+      "replace": {
+        "name": "definition-term"
+      }
+    },
+    {
+      "match": {
+        "name": "definition-detail"
+      },
+      "replace": {
+        "name": "definition-detail"
+      }
+    },
+    {
+      "match": {
+        "name": "template"
+      },
+      "replace": {
+        "name": "template"
+      }
+    },
+    {
+      "match": {
+        "name": "ref"
+      },
+      "replace": {
+        "name": "ref"
+      }
+    },
+    {
+      "match": {
+        "name": "unordered-list-item"
+      },
+      "replace": {
+        "name": "unordered-list-item"
+      }
+    },
+    {
+      "match": {
+        "name": "ordered-list-item"
+      },
+      "replace": {
+        "name": "ordered-list-item"
+      }
+    },
+    {
+      "match": { "name": "table" },
+      "replace": { "name": "table" }
+    },
+    {
+      "match": { "name": "table-row" },
+      "replace": { "name": "table-row" }
+    },
+    {
+      "match": { "name": "table-cell" },
+      "replace": { "name": "table-cell" }
+    },
+    {
+      "match": { "name": "table-heading" },
+      "replace": { "name": "table-heading" }
+    },
+    {
+      "match": { "name": "table-caption" },
+      "replace": { "name": "table-caption" }
+    },
+    {
+      "match": { "name": "preformatted" },
+      "replace": { "name": "preformatted" }
+    },
+    {
+      "match": { "name": "category" },
+      "replace": { "name": "category" }
+    },
+    {
+      "match": { "name": "nowiki" },
+      "replace": { "name": "nowiki" }
+    }
+  ]
+}

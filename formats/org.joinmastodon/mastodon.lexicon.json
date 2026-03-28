@@ -1,0 +1,19 @@
+{
+  "$type": "org.relationaltext.format-lexicon",
+  "id": "org.joinmastodon.facet",
+  "version": "1.0",
+  "specUrl": "https://docs.joinmastodon.org/spec/activitypub/",
+  "implicitBlockType": "p",
+  "features": [
+    { "typeId": "org.joinmastodon.facet#strong",            "featureClass": "inline", "expandStart": true,  "expandEnd": true  },
+    { "typeId": "org.joinmastodon.facet#em",                "featureClass": "inline", "expandStart": true,  "expandEnd": true  },
+    { "typeId": "org.joinmastodon.facet#code",              "featureClass": "inline", "expandStart": false, "expandEnd": false },
+    { "typeId": "org.joinmastodon.facet#a",                 "featureClass": "entity" },
+    { "typeId": "org.joinmastodon.facet#mention",           "featureClass": "entity" },
+    { "typeId": "org.joinmastodon.facet#hashtag",           "featureClass": "entity" },
+    { "typeId": "org.joinmastodon.facet#br",                "featureClass": "entity" },
+    { "typeId": "org.joinmastodon.facet#p",                 "featureClass": "block"  },
+    { "typeId": "org.joinmastodon.facet#pre",               "featureClass": "block"  },
+    { "typeId": "org.joinmastodon.facet#blockquote-marker", "featureClass": "block"  }
+  ]
+}

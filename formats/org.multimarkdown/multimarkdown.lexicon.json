@@ -1,0 +1,122 @@
+{
+  "$type": "org.relationaltext.format-lexicon",
+  "id": "org.multimarkdown.facet",
+  "version": "1.0",
+  "specUrl": "https://rawgit.com/fletcher/MultiMarkdown-6-Syntax-Guide/master/index.html",
+  "implicitBlockType": "paragraph",
+  "features": [
+    {
+      "typeId": "org.multimarkdown.facet#strong",
+      "featureClass": "inline",
+      "expandStart": true,
+      "expandEnd": true
+    },
+    {
+      "typeId": "org.multimarkdown.facet#emphasis",
+      "featureClass": "inline",
+      "expandStart": true,
+      "expandEnd": true
+    },
+    {
+      "typeId": "org.multimarkdown.facet#strikethrough",
+      "featureClass": "inline",
+      "expandStart": true,
+      "expandEnd": true
+    },
+    {
+      "typeId": "org.multimarkdown.facet#highlight",
+      "featureClass": "inline",
+      "expandStart": true,
+      "expandEnd": true
+    },
+    {
+      "typeId": "org.multimarkdown.facet#superscript",
+      "featureClass": "inline",
+      "expandStart": true,
+      "expandEnd": true
+    },
+    {
+      "typeId": "org.multimarkdown.facet#subscript",
+      "featureClass": "inline",
+      "expandStart": true,
+      "expandEnd": true
+    },
+    {
+      "typeId": "org.multimarkdown.facet#code-span",
+      "featureClass": "inline",
+      "expandStart": false,
+      "expandEnd": false
+    },
+    {
+      "typeId": "org.multimarkdown.facet#link",
+      "featureClass": "entity"
+    },
+    {
+      "typeId": "org.multimarkdown.facet#image",
+      "featureClass": "entity"
+    },
+    {
+      "typeId": "org.multimarkdown.facet#footnote-ref",
+      "featureClass": "entity"
+    },
+    {
+      "typeId": "org.multimarkdown.facet#line-break",
+      "featureClass": "entity"
+    },
+    {
+      "typeId": "org.multimarkdown.facet#paragraph",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "org.multimarkdown.facet#heading",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "org.multimarkdown.facet#code-block",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "org.multimarkdown.facet#blockquote-marker",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "org.multimarkdown.facet#bullet-list-marker",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "org.multimarkdown.facet#ordered-list-marker",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "org.multimarkdown.facet#list-item-marker",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "org.multimarkdown.facet#list-item-text",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "org.multimarkdown.facet#horizontal-rule",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "org.multimarkdown.facet#footnote-def",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "org.multimarkdown.facet#metadata",
+      "featureClass": "block"
+    }
+  ],
+  "wasmLens": {
+    "$type": "org.relationaltext.lens",
+    "id": "org.multimarkdown.facet.wasm.v1",
+    "source": "raw:org.multimarkdown.facet",
+    "target": "org.multimarkdown.facet",
+    "wasmModule": {
+      "data": "",
+      "importFn": "import_multimarkdown",
+      "exportFn": "export_multimarkdown"
+    }
+  }
+}

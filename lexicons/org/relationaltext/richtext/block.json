@@ -1,0 +1,40 @@
+{
+  "lexicon": 1,
+  "$type": "com.atproto.lexicon.schema",
+  "id": "org.relationaltext.richtext.block",
+  "revision": 1,
+  "description": "A block element feature for rich text. Block facets partition the document text into typed blocks (paragraph, heading, list item, etc.). The facet's byte range covers the block's full content including its trailing newline character. Block facets must not overlap. Nesting is encoded via the parents array (Kleppmann/Automerge block element model). Container elements (ul, ol, blockquote) are inferred during rendering from consecutive blocks sharing a parents prefix — they are never stored.",
+  "defs": {
+    "main": {
+      "type": "object",
+      "description": "A block element applied to a byte range in the document text.",
+      "required": ["name", "parents"],
+      "properties": {
+        "name": {
+          "type": "string",
+          "knownValues": [
+            "paragraph",
+            "heading",
+            "unordered-list-item",
+            "ordered-list-item",
+            "blockquote",
+            "code-block",
+            "horizontal-rule",
+            "image"
+          ],
+          "description": "The block type name. Known values listed above; unknown values preserved for forward compatibility."
+        },
+        "parents": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Ancestor block type names, from outermost to innermost. An empty array means the block is at the top level. For example, a list item inside a blockquote has parents: [\"blockquote\"]. This encodes nesting without fragile ID references (Kleppmann model).",
+          "maxLength": 8
+        },
+        "attrs": {
+          "type": "unknown",
+          "description": "Optional block-specific attributes. Examples: { level: 1 } for heading h1, { src, alt } for image, { language } for code-block. Free-form JSON object."
+        }
+      }
+    }
+  }
+}

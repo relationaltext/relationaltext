@@ -1,0 +1,9 @@
+{
+  "name": "@relational-text/com.atlassian.wiki",
+  "version": "0.1.0",
+  "type": "module",
+  "exports": {
+    ".": "./ts/confluence.ts",
+    "./*.json": "./*.json"
+  }
+}

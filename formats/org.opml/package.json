@@ -1,0 +1,9 @@
+{
+  "name": "@relational-text/org.opml",
+  "version": "0.1.0",
+  "type": "module",
+  "exports": {
+    ".": "./ts/opml.ts",
+    "./*.json": "./*.json"
+  }
+}

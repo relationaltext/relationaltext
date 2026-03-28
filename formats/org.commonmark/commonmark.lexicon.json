@@ -1,0 +1,169 @@
+{
+  "$type": "org.relationaltext.format-lexicon",
+  "id": "org.commonmark.facet",
+  "version": "0.31",
+  "specUrl": "https://spec.commonmark.org/0.31.2/",
+  "features": [
+    {
+      "typeId": "org.commonmark.facet#strong",
+      "featureClass": "inline",
+      "expandStart": true,
+      "expandEnd": true
+    },
+    {
+      "typeId": "org.commonmark.facet#emphasis",
+      "featureClass": "inline",
+      "expandStart": true,
+      "expandEnd": true
+    },
+    {
+      "typeId": "org.commonmark.facet#strikethrough",
+      "featureClass": "inline",
+      "expandStart": true,
+      "expandEnd": true
+    },
+    {
+      "typeId": "org.commonmark.facet#code-span",
+      "featureClass": "inline",
+      "expandStart": false,
+      "expandEnd": false
+    },
+    {
+      "typeId": "org.commonmark.facet#underline",
+      "featureClass": "inline",
+      "expandStart": false,
+      "expandEnd": false
+    },
+    {
+      "typeId": "org.commonmark.facet#superscript",
+      "featureClass": "inline",
+      "expandStart": false,
+      "expandEnd": false
+    },
+    {
+      "typeId": "org.commonmark.facet#subscript",
+      "featureClass": "inline",
+      "expandStart": false,
+      "expandEnd": false
+    },
+    {
+      "typeId": "org.commonmark.facet#keyboard",
+      "featureClass": "inline",
+      "expandStart": false,
+      "expandEnd": false
+    },
+    {
+      "typeId": "org.commonmark.facet#ins",
+      "featureClass": "inline",
+      "expandStart": true,
+      "expandEnd": true
+    },
+    {
+      "typeId": "org.commonmark.facet#del",
+      "featureClass": "inline",
+      "expandStart": false,
+      "expandEnd": false
+    },
+    {
+      "typeId": "org.commonmark.facet#mark",
+      "featureClass": "inline",
+      "expandStart": false,
+      "expandEnd": false
+    },
+    {
+      "typeId": "org.commonmark.facet#link",
+      "featureClass": "entity"
+    },
+    {
+      "typeId": "org.commonmark.facet#image",
+      "featureClass": "entity"
+    },
+    {
+      "typeId": "org.commonmark.facet#line-break",
+      "featureClass": "entity"
+    },
+    {
+      "typeId": "org.commonmark.facet#paragraph",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "org.commonmark.facet#heading",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "org.commonmark.facet#unordered-list-item",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "org.commonmark.facet#ordered-list-item",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "org.commonmark.facet#blockquote",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "org.commonmark.facet#code-block",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "org.commonmark.facet#horizontal-rule",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "org.commonmark.facet#table",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "org.commonmark.facet#definition-term",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "org.commonmark.facet#definition-detail",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "org.commonmark.facet#html-block",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "org.commonmark.facet#html-inline",
+      "featureClass": "entity"
+    },
+    {
+      "typeId": "org.commonmark.facet#list-item-text",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "org.commonmark.facet#blockquote-marker",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "org.commonmark.facet#list-item-marker",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "org.commonmark.facet#bullet-list-marker",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "org.commonmark.facet#ordered-list-marker",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "org.commonmark.facet#embed",
+      "featureClass": "block"
+    }
+  ],
+  "wasmLens": {
+    "$type": "org.relationaltext.lens",
+    "id": "org.commonmark.facet.wasm.v1",
+    "source": "raw:org.commonmark.facet",
+    "target": "org.commonmark.facet",
+    "wasmModule": {
+      "data": "",
+      "importFn": "import_commonmark",
+      "exportFn": "export_commonmark"
+    }
+  }
+}

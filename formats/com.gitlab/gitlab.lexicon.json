@@ -1,0 +1,134 @@
+{
+  "$type": "org.relationaltext.format-lexicon",
+  "id": "com.gitlab.facet",
+  "version": "1.0",
+  "specUrl": "https://docs.gitlab.com/ee/user/markdown.html",
+  "implicitBlockType": "paragraph",
+  "features": [
+    {
+      "typeId": "com.gitlab.facet#strong",
+      "featureClass": "inline",
+      "expandStart": true,
+      "expandEnd": true
+    },
+    {
+      "typeId": "com.gitlab.facet#emphasis",
+      "featureClass": "inline",
+      "expandStart": true,
+      "expandEnd": true
+    },
+    {
+      "typeId": "com.gitlab.facet#strikethrough",
+      "featureClass": "inline",
+      "expandStart": true,
+      "expandEnd": true
+    },
+    {
+      "typeId": "com.gitlab.facet#ins",
+      "featureClass": "inline",
+      "expandStart": true,
+      "expandEnd": true
+    },
+    {
+      "typeId": "com.gitlab.facet#del",
+      "featureClass": "inline",
+      "expandStart": true,
+      "expandEnd": true
+    },
+    {
+      "typeId": "com.gitlab.facet#code-span",
+      "featureClass": "inline",
+      "expandStart": false,
+      "expandEnd": false
+    },
+    {
+      "typeId": "com.gitlab.facet#math-inline",
+      "featureClass": "inline",
+      "expandStart": false,
+      "expandEnd": false
+    },
+    {
+      "typeId": "com.gitlab.facet#link",
+      "featureClass": "entity"
+    },
+    {
+      "typeId": "com.gitlab.facet#image",
+      "featureClass": "entity"
+    },
+    {
+      "typeId": "com.gitlab.facet#footnote-ref",
+      "featureClass": "entity"
+    },
+    {
+      "typeId": "com.gitlab.facet#mention",
+      "featureClass": "entity"
+    },
+    {
+      "typeId": "com.gitlab.facet#issue-ref",
+      "featureClass": "entity"
+    },
+    {
+      "typeId": "com.gitlab.facet#mr-ref",
+      "featureClass": "entity"
+    },
+    {
+      "typeId": "com.gitlab.facet#line-break",
+      "featureClass": "entity"
+    },
+    {
+      "typeId": "com.gitlab.facet#paragraph",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "com.gitlab.facet#heading",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "com.gitlab.facet#code-block",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "com.gitlab.facet#math-block",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "com.gitlab.facet#blockquote-marker",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "com.gitlab.facet#bullet-list-marker",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "com.gitlab.facet#ordered-list-marker",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "com.gitlab.facet#list-item-marker",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "com.gitlab.facet#list-item-text",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "com.gitlab.facet#horizontal-rule",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "com.gitlab.facet#footnote-def",
+      "featureClass": "block"
+    }
+  ],
+  "wasmLens": {
+    "$type": "org.relationaltext.lens",
+    "id": "com.gitlab.facet.wasm.v1",
+    "source": "raw:com.gitlab.facet",
+    "target": "com.gitlab.facet",
+    "wasmModule": {
+      "data": "",
+      "importFn": "import_gitlab",
+      "exportFn": "export_gitlab"
+    }
+  }
+}

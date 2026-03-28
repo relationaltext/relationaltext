@@ -1,0 +1,13 @@
+{
+  "$type": "org.relationaltext.lens",
+  "id": "org.gfm.to.relationaltext.v1",
+  "description": "Transform GFM extension facets to RelationalText canonical facets",
+  "source": "org.gfm.facet",
+  "target": "org.relationaltext.facet",
+  "rules": [
+    { "match": { "name": "strikethrough" },
+      "replace": { "name": "strikethrough" } },
+    { "match": { "name": "table" },
+      "replace": { "name": "table" } }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "name": "@relational-text/com.roamresearch",
+  "version": "0.1.0",
+  "type": "module",
+  "exports": {
+    ".": "./ts/roam.ts",
+    "./*.json": "./*.json"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "name": "@relational-text/org.jupyter",
+  "version": "0.1.0",
+  "type": "module",
+  "exports": {
+    ".": "./ts/jupyter.ts",
+    "./*.json": "./*.json"
+  }
+}

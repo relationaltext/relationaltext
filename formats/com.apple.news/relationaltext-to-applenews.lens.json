@@ -1,0 +1,32 @@
+{
+  "$type": "org.relationaltext.lens",
+  "id": "org.relationaltext.to.apple.news.v1",
+  "description": "Transform RelationalText facets to Apple News Format facets",
+  "source": "org.relationaltext.facet",
+  "target": "com.apple.news.facet",
+  "invertible": false,
+  "rules": [
+    { "match": { "name": "bold" },          "replace": { "name": "bold" } },
+    { "match": { "name": "italic" },        "replace": { "name": "italic" } },
+    { "match": { "name": "strikethrough" }, "replace": { "name": "strikethrough" } },
+    { "match": { "name": "underline" },     "replace": { "name": "underline" } },
+    { "match": { "name": "link" },          "replace": { "name": "link", "renameAttrs": { "url": "URL" } } },
+    { "match": { "name": "paragraph" },     "replace": { "name": "body" } },
+    { "match": { "name": "heading", "matchAttrs": { "level": 1 } }, "replace": { "name": "heading1", "dropAttrs": ["level"] } },
+    { "match": { "name": "heading", "matchAttrs": { "level": 2 } }, "replace": { "name": "heading2", "dropAttrs": ["level"] } },
+    { "match": { "name": "heading", "matchAttrs": { "level": 3 } }, "replace": { "name": "heading3", "dropAttrs": ["level"] } },
+    { "match": { "name": "heading", "matchAttrs": { "level": 4 } }, "replace": { "name": "heading4", "dropAttrs": ["level"] } },
+    { "match": { "name": "heading", "matchAttrs": { "level": 5 } }, "replace": { "name": "heading5", "dropAttrs": ["level"] } },
+    { "match": { "name": "heading", "matchAttrs": { "level": 6 } }, "replace": { "name": "heading6", "dropAttrs": ["level"] } },
+    { "match": { "name": "blockquote-marker" },  "replace": { "name": "quote" } },
+    { "match": { "name": "code-block" },         "replace": { "name": "body" } },
+    { "match": { "name": "unordered-list-item" }, "replace": { "name": "body" } },
+    { "match": { "name": "ordered-list-item" },   "replace": { "name": "body" } },
+    { "match": { "name": "list-item-text" },     "replace": { "name": "body" } },
+    { "match": { "name": "list-item-marker" },   "replace": { "name": "body" } },
+    { "match": { "name": "bullet-list-marker" }, "replace": { "name": "body" } },
+    { "match": { "name": "ordered-list-marker" },"replace": { "name": "body" } },
+    { "match": { "name": "horizontal-rule" },    "replace": null },
+    { "match": { "name": "line-break" },         "replace": null }
+  ]
+}

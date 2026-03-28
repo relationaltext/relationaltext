@@ -1,0 +1,29 @@
+{
+  "lexicon": 1,
+  "$type": "com.atproto.lexicon.schema",
+  "id": "com.atproto.repo.supersede",
+  "revision": 1,
+  "description": "A generic assertion that one record supersedes another. The subject record still exists but a better version is available at supersededBy. Consumers choose whether to follow the chain.",
+  "defs": {
+    "main": {
+      "type": "record",
+      "key": "any",
+      "record": {
+        "type": "object",
+        "required": ["subject", "supersededBy"],
+        "properties": {
+          "subject": {
+            "type": "string",
+            "format": "at-uri",
+            "description": "AT-URI of the record being superseded."
+          },
+          "supersededBy": {
+            "type": "string",
+            "format": "at-uri",
+            "description": "AT-URI of the record that supersedes the subject."
+          }
+        }
+      }
+    }
+  }
+}

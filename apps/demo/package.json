@@ -1,0 +1,48 @@
+{
+  "name": "relationaltext-demo",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "predev": "node scripts/link-data.mjs",
+    "dev": "next dev",
+    "prebuild": "node scripts/link-data.mjs",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@lexical/code": "^0.17",
+    "@lexical/history": "^0.17",
+    "@lexical/link": "^0.17",
+    "@lexical/list": "^0.17",
+    "@lexical/react": "^0.17",
+    "@lexical/rich-text": "^0.17",
+    "@lexical/table": "^0.17",
+    "@tiptap/extension-image": "^2",
+    "@tiptap/extension-link": "^2",
+    "@tiptap/extension-subscript": "^2",
+    "@tiptap/extension-superscript": "^2",
+    "@tiptap/extension-table": "^2",
+    "@tiptap/extension-table-cell": "^2",
+    "@tiptap/extension-table-header": "^2",
+    "@tiptap/extension-table-row": "^2",
+    "@tiptap/extension-underline": "^2",
+    "@tiptap/react": "^2",
+    "@tiptap/starter-kit": "^2",
+    "lexical": "^0.17",
+    "next": "^15",
+    "quill": "^2",
+    "react": "^18",
+    "react-dom": "^18",
+    "relational-text": "workspace:*",
+    "relational-text-react": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/node": "^22",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "autoprefixer": "^10.4.27",
+    "postcss": "^8.5.8",
+    "tailwindcss": "^3.4.19",
+    "typescript": "^5"
+  }
+}

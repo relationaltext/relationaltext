@@ -1,0 +1,105 @@
+{
+  "$type": "org.relationaltext.format-lexicon",
+  "id": "rocks.slate.facet",
+  "version": "1.0",
+  "specUrl": "https://docs.slatejs.org/",
+  "wasmLens": {
+    "$type": "org.relationaltext.lens",
+    "id": "rocks.slate.wasm.v1",
+    "source": "raw:rocks.slate.facet",
+    "target": "rocks.slate.facet",
+    "wasmModule": {
+      "data": "",
+      "importFn": "import",
+      "exportFn": "export"
+    }
+  },
+  "features": [
+    {
+      "typeId": "rocks.slate.facet#bold",
+      "featureClass": "inline",
+      "expandStart": true,
+      "expandEnd": true
+    },
+    {
+      "typeId": "rocks.slate.facet#italic",
+      "featureClass": "inline",
+      "expandStart": true,
+      "expandEnd": true
+    },
+    {
+      "typeId": "rocks.slate.facet#underline",
+      "featureClass": "inline",
+      "expandStart": true,
+      "expandEnd": true
+    },
+    {
+      "typeId": "rocks.slate.facet#strikethrough",
+      "featureClass": "inline",
+      "expandStart": true,
+      "expandEnd": true
+    },
+    {
+      "typeId": "rocks.slate.facet#code",
+      "featureClass": "inline",
+      "expandStart": false,
+      "expandEnd": false
+    },
+    {
+      "typeId": "rocks.slate.facet#superscript",
+      "featureClass": "inline",
+      "expandStart": false,
+      "expandEnd": false
+    },
+    {
+      "typeId": "rocks.slate.facet#subscript",
+      "featureClass": "inline",
+      "expandStart": false,
+      "expandEnd": false
+    },
+    {
+      "typeId": "rocks.slate.facet#link",
+      "featureClass": "entity"
+    },
+    {
+      "typeId": "rocks.slate.facet#hard-break",
+      "featureClass": "entity"
+    },
+    {
+      "typeId": "rocks.slate.facet#paragraph",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "rocks.slate.facet#heading",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "rocks.slate.facet#code-block",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "rocks.slate.facet#list-item-text",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "rocks.slate.facet#horizontal-rule",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "rocks.slate.facet#blockquote-marker",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "rocks.slate.facet#bullet-list-marker",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "rocks.slate.facet#ordered-list-marker",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "rocks.slate.facet#list-item-marker",
+      "featureClass": "block"
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "name": "@relational-text/io.lexical",
+  "version": "0.1.0",
+  "type": "module",
+  "exports": {
+    ".": "./ts/lexical.ts",
+    "./*.json": "./*.json"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "name": "@relational-text/com.linkedin",
+  "version": "0.1.0",
+  "type": "module",
+  "exports": {
+    ".": "./ts/linkedin.ts",
+    "./*.json": "./*.json"
+  }
+}

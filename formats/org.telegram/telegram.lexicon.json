@@ -1,0 +1,92 @@
+{
+  "$type": "org.relationaltext.format-lexicon",
+  "id": "org.telegram.facet",
+  "version": "1.0",
+  "specUrl": "https://core.telegram.org/bots/api#markdownv2-style",
+  "implicitBlockType": "paragraph",
+  "features": [
+    {
+      "typeId": "org.telegram.facet#bold",
+      "featureClass": "inline",
+      "expandStart": true,
+      "expandEnd": true
+    },
+    {
+      "typeId": "org.telegram.facet#italic",
+      "featureClass": "inline",
+      "expandStart": true,
+      "expandEnd": true
+    },
+    {
+      "typeId": "org.telegram.facet#underline",
+      "featureClass": "inline",
+      "expandStart": true,
+      "expandEnd": true
+    },
+    {
+      "typeId": "org.telegram.facet#strikethrough",
+      "featureClass": "inline",
+      "expandStart": true,
+      "expandEnd": true
+    },
+    {
+      "typeId": "org.telegram.facet#spoiler",
+      "featureClass": "inline",
+      "expandStart": true,
+      "expandEnd": true
+    },
+    {
+      "typeId": "org.telegram.facet#code",
+      "featureClass": "inline",
+      "expandStart": false,
+      "expandEnd": false
+    },
+    {
+      "typeId": "org.telegram.facet#text_link",
+      "featureClass": "entity"
+    },
+    {
+      "typeId": "org.telegram.facet#code-block",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "org.telegram.facet#paragraph",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "org.telegram.facet#blockquote-marker",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "org.telegram.facet#bullet-list-marker",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "org.telegram.facet#ordered-list-marker",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "org.telegram.facet#list-item-marker",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "org.telegram.facet#list-item-text",
+      "featureClass": "block"
+    },
+    {
+      "typeId": "org.telegram.facet#quote",
+      "featureClass": "block"
+    }
+  ],
+  "wasmLens": {
+    "$type": "org.relationaltext.lens",
+    "id": "telegram.wasm.v1",
+    "source": "raw:org.telegram.facet",
+    "target": "org.telegram.facet",
+    "wasmModule": {
+      "data": "",
+      "importFn": "import",
+      "exportFn": "export"
+    }
+  }
+}

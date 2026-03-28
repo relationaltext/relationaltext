@@ -1,0 +1,340 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+details > summary {
+  list-style: none;
+}
+
+details > summary::-webkit-details-marker {
+  display: none;
+}
+
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+}
+
+::selection {
+  background: #d3e8d8;
+  color: #1c1c19;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --border: #e2e8f0;
+  --bg: #f8fafc;
+  --text: #1e293b;
+  --header-bg: #1e293b;
+  --header-text: #f1f5f9;
+  --pane-bg: #fff;
+  --pane-header-bg: #f1f5f9;
+  --pane-header-text: #475569;
+  --accent: #6366f1;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-size: 1.25rem;
+  color: var(--pane-header-text);
+}
+
+.demo-layout {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.demo-header {
+  background: var(--header-bg);
+  color: var(--header-text);
+  padding: 0.75rem 1.5rem;
+  flex-shrink: 0;
+}
+
+.demo-header h1 {
+  margin: 0 0 0.25rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.demo-header p {
+  margin: 0;
+  font-size: 0.875rem;
+  opacity: 0.7;
+}
+
+.panes-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 1px;
+  flex: 1;
+  overflow: hidden;
+  background: var(--border);
+}
+
+.editor-pane,
+.output-pane {
+  display: flex;
+  flex-direction: column;
+  background: var(--pane-bg);
+  overflow: hidden;
+}
+
+.pane-header {
+  padding: 0.5rem 0.75rem;
+  background: var(--pane-header-bg);
+  color: var(--pane-header-text);
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  flex-shrink: 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.editor-content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 0.75rem;
+}
+
+.editor-content .ProseMirror {
+  outline: none;
+  min-height: 100%;
+}
+
+.quill-container {
+  flex: 1;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.quill-container .ql-container {
+  flex: 1;
+  overflow-y: auto;
+  border: none;
+  font-size: 0.9rem;
+}
+
+.quill-container .ql-toolbar {
+  border: none;
+  border-bottom: 1px solid var(--border);
+  flex-shrink: 0;
+}
+
+.output-content {
+  flex: 1;
+  margin: 0;
+  padding: 0.75rem;
+  overflow: auto;
+  font-family: 'Fira Code', 'Cascadia Code', 'Consolas', monospace;
+  font-size: 0.8rem;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.error {
+  padding: 0.75rem;
+  color: #ef4444;
+  font-size: 0.875rem;
+}
+
+.format-selector {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--pane-header-text);
+}
+
+.format-selector select {
+  font-size: 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 0.2rem 0.4rem;
+  background: white;
+  color: var(--text);
+}
+
+.any-format {
+  grid-column: 3;
+  grid-row: 1 / 3;
+}
+
+/* Editor type selector in pane header */
+.editor-type-select {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border: none;
+  background: transparent;
+  color: var(--pane-header-text);
+  cursor: pointer;
+  padding: 0;
+  outline: none;
+}
+
+.editor-type-select:focus {
+  outline: 1px solid var(--accent);
+  border-radius: 2px;
+}
+
+/* Markdown textarea */
+.markdown-editor {
+  flex: 1;
+  resize: none;
+  border: none;
+  outline: none;
+  padding: 0.75rem;
+  font-family: 'Fira Code', 'Cascadia Code', 'Consolas', monospace;
+  font-size: 0.85rem;
+  line-height: 1.6;
+  background: var(--pane-bg);
+  color: var(--text);
+  overflow-y: auto;
+}
+
+/* Lexical editor */
+.lexical-wrapper {
+  flex: 1;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.lexical-editor {
+  flex: 1;
+  outline: none;
+  padding: 0.75rem;
+  overflow-y: auto;
+  min-height: 100%;
+}
+
+.lexical-editor p { margin: 0 0 0.5em; }
+.lexical-editor h1, .lexical-editor h2, .lexical-editor h3 { margin: 0.5em 0 0.25em; }
+.lexical-editor ul, .lexical-editor ol { margin: 0; padding-left: 1.5em; }
+
+.lexical-placeholder {
+  position: absolute;
+  top: 0.75rem;
+  left: 0.75rem;
+  color: #94a3b8;
+  pointer-events: none;
+  font-size: 0.9rem;
+}
+
+.tiptap-wrapper {
+  flex: 1;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.tiptap-wrapper .editor-content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 0.75rem;
+}
+
+.editor-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  padding: 0.25rem 0.5rem;
+  background: var(--pane-header-bg);
+  border-bottom: 1px solid var(--border);
+  flex-shrink: 0;
+  flex-wrap: wrap;
+}
+
+.editor-toolbar button {
+  padding: 0.2rem 0.45rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  line-height: 1.4;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  background: transparent;
+  color: var(--pane-header-text);
+  cursor: pointer;
+  min-width: 1.75rem;
+  text-align: center;
+}
+
+.editor-toolbar button:hover {
+  background: var(--border);
+  color: var(--text);
+}
+
+.editor-toolbar button.active {
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+}
+
+.toolbar-divider {
+  width: 1px;
+  height: 1.25rem;
+  background: var(--border);
+  margin: 0 0.25rem;
+  flex-shrink: 0;
+}
+
+.lexical-embed-card {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  background: var(--pane-header-bg);
+  margin: 4px 0;
+  font-size: 13px;
+}
+
+.lexical-embed-type {
+  font-weight: 600;
+  color: var(--accent);
+  text-transform: uppercase;
+  font-size: 11px;
+}
+
+.lexical-embed-url {
+  color: #888;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  flex: 1;
+}
+
+.lexical-embed-title {
+  font-style: italic;
+}

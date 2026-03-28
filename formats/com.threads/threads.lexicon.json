@@ -1,0 +1,48 @@
+{
+  "$type": "org.relationaltext.format-lexicon",
+  "id": "com.threads.facet",
+  "version": "1.0",
+  "specUrl": "https://help.instagram.com/",
+  "implicitBlockType": "paragraph",
+  "features": [
+    {
+      "typeId": "com.threads.facet#bold",
+      "featureClass": "inline",
+      "expandStart": true,
+      "expandEnd": true
+    },
+    {
+      "typeId": "com.threads.facet#italic",
+      "featureClass": "inline",
+      "expandStart": true,
+      "expandEnd": true
+    },
+    {
+      "typeId": "com.threads.facet#mention",
+      "featureClass": "entity"
+    },
+    {
+      "typeId": "com.threads.facet#hashtag",
+      "featureClass": "entity"
+    },
+    {
+      "typeId": "com.threads.facet#link",
+      "featureClass": "entity"
+    },
+    {
+      "typeId": "com.threads.facet#paragraph",
+      "featureClass": "block"
+    }
+  ],
+  "wasmLens": {
+    "$type": "org.relationaltext.lens",
+    "id": "threads.wasm.v1",
+    "source": "raw:com.threads.facet",
+    "target": "com.threads.facet",
+    "wasmModule": {
+      "data": "",
+      "importFn": "import",
+      "exportFn": "export"
+    }
+  }
+}
