@@ -3,8 +3,7 @@ import type { NextConfig } from 'next'
 const nextConfig: NextConfig = {
   // Static export — no Node.js server needed, no SSR. WASM loads client-side only.
   output: 'export',
-  // Hosted at relationaltext.org/demo via GitHub Pages
-  basePath: '/demo',
+  // Hosted at demo.relationaltext.org via GitHub Pages (separate repo)
   // Transpile workspace packages that ship raw TypeScript (no pre-built dist/).
   transpilePackages: ['relational-text', 'relational-text-react'],
   webpack(config, { isServer }) {
