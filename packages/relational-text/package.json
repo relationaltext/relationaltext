@@ -83,7 +83,8 @@
     "dist/wasm/"
   ],
   "scripts": {
-    "build": "pnpm build:format-wasm && tsup && rm -rf dist/wasm && cp -r src/wasm dist/wasm && rm -f dist/wasm/.gitignore",
+    "build": "tsup && rm -rf dist/wasm && cp -r src/wasm dist/wasm && rm -f dist/wasm/.gitignore",
+    "build:full": "pnpm build:format-wasm && pnpm build",
     "build:wasm": "wasm-pack build ../../crates/relationaltext-wasm --target bundler --out-dir ../../../packages/relational-text/src/wasm --out-name relationaltext_wasm",
     "build:format-wasm": "tsx ../../scripts/build-format-wasm.ts",
     "build:format-wasm:quill": "tsx ../../scripts/build-format-wasm.ts --format quill",
