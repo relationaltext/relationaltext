@@ -8,7 +8,7 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
 export default defineConfig({
   title: 'RelationalText',
-  description: 'WASM-powered rich text facets for the atproto ecosystem',
+  description: 'A panproto document model for structured annotations across formats',
   base: '/',
 
   // Format docs live in formats/[nsid]/docs.md and are symlinked into
