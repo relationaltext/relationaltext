@@ -7,7 +7,8 @@ node_modules/
 out/
 docs/.vitepress/cache/
 docs/.vitepress/dist/
-packages/relational-text/src/wasm/
+# packages/relational-text/src/wasm/ is committed (pre-built WASM binaries)
+packages/relational-text/src/wasm/.gitignore
 scripts/cache/
 .DS_Store
 data/

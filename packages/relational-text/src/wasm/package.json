@@ -1,0 +1,19 @@
+{
+  "name": "relationaltext-wasm",
+  "type": "module",
+  "description": "WASM bindings for the RelationalText rich text toolkit",
+  "version": "0.1.0",
+  "license": "Apache-2.0",
+  "files": [
+    "relationaltext_wasm_bg.wasm",
+    "relationaltext_wasm.js",
+    "relationaltext_wasm_bg.js",
+    "relationaltext_wasm.d.ts"
+  ],
+  "main": "relationaltext_wasm.js",
+  "types": "relationaltext_wasm.d.ts",
+  "sideEffects": [
+    "./relationaltext_wasm.js",
+    "./snippets/*"
+  ]
+}
