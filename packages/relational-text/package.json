@@ -118,7 +118,7 @@
     "type": "git",
     "url": "https://github.com/relationaltext/relationaltext"
   },
-  "license": "Apache-2.0",
+  "license": "Apache-2.0 OR MIT",
   "peerDependencies": {
     "@automerge/automerge": "^3.2.4"
   },
